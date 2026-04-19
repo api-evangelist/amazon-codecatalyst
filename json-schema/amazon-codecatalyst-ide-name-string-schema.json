@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-ide-name-string-schema.json",
+  "title": "IdeNameString",
+  "description": "IdeNameString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 128
+}

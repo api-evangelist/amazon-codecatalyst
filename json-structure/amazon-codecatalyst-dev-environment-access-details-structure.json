@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-access-details-structure.json",
+  "name": "DevEnvironmentAccessDetails",
+  "description": "Information about connection details for a Dev Environment.",
+  "type": "object",
+  "properties": {
+    "streamUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SensitiveString"
+        },
+        {
+          "description": "The URL used to send commands to and from the Dev Environment."
+        }
+      ]
+    },
+    "tokenValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SensitiveString"
+        },
+        {
+          "description": "An encrypted token value that contains session and caller information used to authenticate the connection."
+        }
+      ]
+    }
+  },
+  "required": [
+    "streamUrl",
+    "tokenValue"
+  ]
+}

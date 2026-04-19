@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-delete-space-request-structure.json",
+  "name": "DeleteSpaceRequest",
+  "description": "DeleteSpaceRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {}
+}

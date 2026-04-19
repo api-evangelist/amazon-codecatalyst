@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-get-user-details-request-user-name-string-schema.json",
+  "title": "GetUserDetailsRequestUserNameString",
+  "description": "GetUserDetailsRequestUserNameString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9]{3,100}",
+  "minLength": 3,
+  "maxLength": 100
+}

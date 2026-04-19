@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-source-repository-name-string-structure.json",
+  "name": "SourceRepositoryNameString",
+  "description": "SourceRepositoryNameString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "(?!.*[.]git$)[\\w\\-.]*",
+  "minLength": 1,
+  "maxLength": 100
+}

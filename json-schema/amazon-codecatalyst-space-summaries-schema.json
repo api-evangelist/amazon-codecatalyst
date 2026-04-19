@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-space-summaries-schema.json",
+  "title": "SpaceSummaries",
+  "description": "SpaceSummaries schema from Amazon CodeCatalyst",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/SpaceSummary"
+  }
+}

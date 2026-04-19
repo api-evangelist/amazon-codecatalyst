@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-list-spaces-response-schema.json",
+  "title": "ListSpacesResponse",
+  "description": "ListSpacesResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A token returned from a call to this API to indicate the next batch of results to return, if any."
+        }
+      ]
+    },
+    "items": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SpaceSummaries"
+        },
+        {
+          "description": "Information about the spaces. "
+        }
+      ]
+    }
+  }
+}

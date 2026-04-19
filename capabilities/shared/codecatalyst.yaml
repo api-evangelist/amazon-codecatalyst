@@ -1,0 +1,940 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon CodeCatalyst
+  description: Unified software development service for teams to collaborate on code, build CI/CD workflows, and manage projects on AWS.
+  tags:
+  - Amazon
+  - AWS
+  - DevOps
+  - CI/CD
+  - Collaboration
+  - Developer Tools
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    CODECATALYST_TOKEN: CODECATALYST_TOKEN
+capability:
+  consumes:
+  - type: http
+    namespace: codecatalyst
+    baseUri: http://codecatalyst.global.api.aws
+    description: Amazon CodeCatalyst REST API.
+    authentication:
+      type: bearer
+      token: '{{CODECATALYST_TOKEN}}'
+    resources:
+    - name: v1
+      path: /v1/accessTokens
+      description: Operations for v1
+      operations:
+      - name: createAccessToken
+        method: PUT
+        description: Amazon CodeCatalyst Create Access Token
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listAccessTokens
+        method: POST
+        description: Amazon CodeCatalyst List Access Tokens
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: createDevEnvironment
+        method: PUT
+        description: Amazon CodeCatalyst Create Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listDevEnvironments
+        method: POST
+        description: Amazon CodeCatalyst List Dev Environments
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: createProject
+        method: PUT
+        description: Amazon CodeCatalyst Create Project
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listProjects
+        method: POST
+        description: Amazon CodeCatalyst List Projects
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: createSourceRepository
+        method: PUT
+        description: Amazon CodeCatalyst Create Source Repository
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteSourceRepository
+        method: DELETE
+        description: Amazon CodeCatalyst Delete Source Repository
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getSourceRepository
+        method: GET
+        description: Amazon CodeCatalyst Get Source Repository
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createSourceRepositoryBranch
+        method: PUT
+        description: Amazon CodeCatalyst Create Source Repository Branch
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteAccessToken
+        method: DELETE
+        description: Amazon CodeCatalyst Delete Access Token
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteDevEnvironment
+        method: DELETE
+        description: Amazon CodeCatalyst Delete Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getDevEnvironment
+        method: GET
+        description: Amazon CodeCatalyst Get Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateDevEnvironment
+        method: PATCH
+        description: Amazon CodeCatalyst Update Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteProject
+        method: DELETE
+        description: Amazon CodeCatalyst Delete Project
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getProject
+        method: GET
+        description: Amazon CodeCatalyst Get Project
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateProject
+        method: PATCH
+        description: Amazon CodeCatalyst Update Project
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: deleteSpace
+        method: DELETE
+        description: Amazon CodeCatalyst Delete Space
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getSpace
+        method: GET
+        description: Amazon CodeCatalyst Get Space
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateSpace
+        method: PATCH
+        description: Amazon CodeCatalyst Update Space
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: getSourceRepositoryCloneUrls
+        method: GET
+        description: Amazon CodeCatalyst Get Source Repository Clone Urls
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getSubscription
+        method: GET
+        description: Amazon CodeCatalyst Get Subscription
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listDevEnvironmentSessions
+        method: POST
+        description: Amazon CodeCatalyst List Dev Environment Sessions
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listEventLogs
+        method: POST
+        description: Amazon CodeCatalyst List Event Logs
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listSourceRepositories
+        method: POST
+        description: Amazon CodeCatalyst List Source Repositories
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listSourceRepositoryBranches
+        method: POST
+        description: Amazon CodeCatalyst List Source Repository Branches
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: listSpaces
+        method: POST
+        description: Amazon CodeCatalyst List Spaces
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: startDevEnvironment
+        method: PUT
+        description: Amazon CodeCatalyst Start Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: startDevEnvironmentSession
+        method: PUT
+        description: Amazon CodeCatalyst Start Dev Environment Session
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: stopDevEnvironment
+        method: PUT
+        description: Amazon CodeCatalyst Stop Dev Environment
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: stopDevEnvironmentSession
+        method: DELETE
+        description: Amazon CodeCatalyst Stop Dev Environment Session
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: userDetails
+      path: /userDetails
+      description: Operations for userDetails
+      operations:
+      - name: getUserDetails
+        method: GET
+        description: Amazon CodeCatalyst Get User Details
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: session
+      path: /session
+      description: Operations for session
+      operations:
+      - name: verifySession
+        method: GET
+        description: Amazon CodeCatalyst Verify Session
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8100
+    namespace: codecatalyst-rest
+    resources:
+    - path: /v1/v1
+      name: v1
+      description: REST for v1
+      operations:
+      - method: PUT
+        name: createAccessToken
+        description: Amazon CodeCatalyst Create Access Token
+        call: codecatalyst.createAccessToken
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listAccessTokens
+        description: Amazon CodeCatalyst List Access Tokens
+        call: codecatalyst.listAccessTokens
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createDevEnvironment
+        description: Amazon CodeCatalyst Create Dev Environment
+        call: codecatalyst.createDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listDevEnvironments
+        description: Amazon CodeCatalyst List Dev Environments
+        call: codecatalyst.listDevEnvironments
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createProject
+        description: Amazon CodeCatalyst Create Project
+        call: codecatalyst.createProject
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listProjects
+        description: Amazon CodeCatalyst List Projects
+        call: codecatalyst.listProjects
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createSourceRepository
+        description: Amazon CodeCatalyst Create Source Repository
+        call: codecatalyst.createSourceRepository
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteSourceRepository
+        description: Amazon CodeCatalyst Delete Source Repository
+        call: codecatalyst.deleteSourceRepository
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getSourceRepository
+        description: Amazon CodeCatalyst Get Source Repository
+        call: codecatalyst.getSourceRepository
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createSourceRepositoryBranch
+        description: Amazon CodeCatalyst Create Source Repository Branch
+        call: codecatalyst.createSourceRepositoryBranch
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteAccessToken
+        description: Amazon CodeCatalyst Delete Access Token
+        call: codecatalyst.deleteAccessToken
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteDevEnvironment
+        description: Amazon CodeCatalyst Delete Dev Environment
+        call: codecatalyst.deleteDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getDevEnvironment
+        description: Amazon CodeCatalyst Get Dev Environment
+        call: codecatalyst.getDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateDevEnvironment
+        description: Amazon CodeCatalyst Update Dev Environment
+        call: codecatalyst.updateDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteProject
+        description: Amazon CodeCatalyst Delete Project
+        call: codecatalyst.deleteProject
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getProject
+        description: Amazon CodeCatalyst Get Project
+        call: codecatalyst.getProject
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateProject
+        description: Amazon CodeCatalyst Update Project
+        call: codecatalyst.updateProject
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteSpace
+        description: Amazon CodeCatalyst Delete Space
+        call: codecatalyst.deleteSpace
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getSpace
+        description: Amazon CodeCatalyst Get Space
+        call: codecatalyst.getSpace
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateSpace
+        description: Amazon CodeCatalyst Update Space
+        call: codecatalyst.updateSpace
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getSourceRepositoryCloneUrls
+        description: Amazon CodeCatalyst Get Source Repository Clone Urls
+        call: codecatalyst.getSourceRepositoryCloneUrls
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getSubscription
+        description: Amazon CodeCatalyst Get Subscription
+        call: codecatalyst.getSubscription
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listDevEnvironmentSessions
+        description: Amazon CodeCatalyst List Dev Environment Sessions
+        call: codecatalyst.listDevEnvironmentSessions
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listEventLogs
+        description: Amazon CodeCatalyst List Event Logs
+        call: codecatalyst.listEventLogs
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listSourceRepositories
+        description: Amazon CodeCatalyst List Source Repositories
+        call: codecatalyst.listSourceRepositories
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listSourceRepositoryBranches
+        description: Amazon CodeCatalyst List Source Repository Branches
+        call: codecatalyst.listSourceRepositoryBranches
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: listSpaces
+        description: Amazon CodeCatalyst List Spaces
+        call: codecatalyst.listSpaces
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: startDevEnvironment
+        description: Amazon CodeCatalyst Start Dev Environment
+        call: codecatalyst.startDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: startDevEnvironmentSession
+        description: Amazon CodeCatalyst Start Dev Environment Session
+        call: codecatalyst.startDevEnvironmentSession
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: stopDevEnvironment
+        description: Amazon CodeCatalyst Stop Dev Environment
+        call: codecatalyst.stopDevEnvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: stopDevEnvironmentSession
+        description: Amazon CodeCatalyst Stop Dev Environment Session
+        call: codecatalyst.stopDevEnvironmentSession
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/userDetails
+      name: userDetails
+      description: REST for userDetails
+      operations:
+      - method: GET
+        name: getUserDetails
+        description: Amazon CodeCatalyst Get User Details
+        call: codecatalyst.getUserDetails
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/session
+      name: session
+      description: REST for session
+      operations:
+      - method: GET
+        name: verifySession
+        description: Amazon CodeCatalyst Verify Session
+        call: codecatalyst.verifySession
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9100
+    namespace: codecatalyst-mcp
+    transport: http
+    tools:
+    - name: codecatalyst-createAccessToken
+      description: Amazon CodeCatalyst Create Access Token
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.createAccessToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listAccessTokens
+      description: Amazon CodeCatalyst List Access Tokens
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listAccessTokens
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-createDevEnvironment
+      description: Amazon CodeCatalyst Create Dev Environment
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.createDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listDevEnvironments
+      description: Amazon CodeCatalyst List Dev Environments
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listDevEnvironments
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-createProject
+      description: Amazon CodeCatalyst Create Project
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.createProject
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listProjects
+      description: Amazon CodeCatalyst List Projects
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listProjects
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-createSourceRepository
+      description: Amazon CodeCatalyst Create Source Repository
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.createSourceRepository
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-deleteSourceRepository
+      description: Amazon CodeCatalyst Delete Source Repository
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.deleteSourceRepository
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getSourceRepository
+      description: Amazon CodeCatalyst Get Source Repository
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getSourceRepository
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-createSourceRepositoryBranch
+      description: Amazon CodeCatalyst Create Source Repository Branch
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.createSourceRepositoryBranch
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-deleteAccessToken
+      description: Amazon CodeCatalyst Delete Access Token
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.deleteAccessToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-deleteDevEnvironment
+      description: Amazon CodeCatalyst Delete Dev Environment
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.deleteDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getDevEnvironment
+      description: Amazon CodeCatalyst Get Dev Environment
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-updateDevEnvironment
+      description: Amazon CodeCatalyst Update Dev Environment
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.updateDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-deleteProject
+      description: Amazon CodeCatalyst Delete Project
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.deleteProject
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getProject
+      description: Amazon CodeCatalyst Get Project
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getProject
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-updateProject
+      description: Amazon CodeCatalyst Update Project
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.updateProject
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-deleteSpace
+      description: Amazon CodeCatalyst Delete Space
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.deleteSpace
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getSpace
+      description: Amazon CodeCatalyst Get Space
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getSpace
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-updateSpace
+      description: Amazon CodeCatalyst Update Space
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.updateSpace
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getSourceRepositoryCloneUrls
+      description: Amazon CodeCatalyst Get Source Repository Clone Urls
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getSourceRepositoryCloneUrls
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getSubscription
+      description: Amazon CodeCatalyst Get Subscription
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getSubscription
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listDevEnvironmentSessions
+      description: Amazon CodeCatalyst List Dev Environment Sessions
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listDevEnvironmentSessions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listEventLogs
+      description: Amazon CodeCatalyst List Event Logs
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listEventLogs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listSourceRepositories
+      description: Amazon CodeCatalyst List Source Repositories
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listSourceRepositories
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listSourceRepositoryBranches
+      description: Amazon CodeCatalyst List Source Repository Branches
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listSourceRepositoryBranches
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-listSpaces
+      description: Amazon CodeCatalyst List Spaces
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.listSpaces
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-startDevEnvironment
+      description: Amazon CodeCatalyst Start Dev Environment
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.startDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-startDevEnvironmentSession
+      description: Amazon CodeCatalyst Start Dev Environment Session
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.startDevEnvironmentSession
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-stopDevEnvironment
+      description: Amazon CodeCatalyst Stop Dev Environment
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.stopDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-stopDevEnvironmentSession
+      description: Amazon CodeCatalyst Stop Dev Environment Session
+      hints:
+        readOnly: false
+        openWorld: true
+      call: codecatalyst.stopDevEnvironmentSession
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-getUserDetails
+      description: Amazon CodeCatalyst Get User Details
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.getUserDetails
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: codecatalyst-verifySession
+      description: Amazon CodeCatalyst Verify Session
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.verifySession
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-email-address-schema.json",
+  "title": "EmailAddress",
+  "description": "Information about an email address.",
+  "type": "object",
+  "properties": {
+    "email": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The email address."
+        }
+      ]
+    },
+    "verified": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "Whether the email address has been verified."
+        }
+      ]
+    }
+  }
+}

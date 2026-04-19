@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-list-access-tokens-request-next-token-string-schema.json",
+  "title": "ListAccessTokensRequestNextTokenString",
+  "description": "ListAccessTokensRequestNextTokenString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 10000
+}

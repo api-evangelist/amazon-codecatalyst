@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-space-summary-schema.json",
+  "title": "SpaceSummary",
+  "description": "Information about an space.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "regionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RegionString"
+        },
+        {
+          "description": "The Amazon Web Services Region where the space exists."
+        }
+      ]
+    },
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The friendly name of the space displayed to users."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The description of the space."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "regionName"
+  ]
+}

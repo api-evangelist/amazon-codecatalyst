@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-get-source-repository-clone-urls-response-structure.json",
+  "name": "GetSourceRepositoryCloneUrlsResponse",
+  "description": "GetSourceRepositoryCloneUrlsResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "https": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The HTTPS URL to use when cloning the source repository."
+        }
+      ]
+    }
+  },
+  "required": [
+    "https"
+  ]
+}

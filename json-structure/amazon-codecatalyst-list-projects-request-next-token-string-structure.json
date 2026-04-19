@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-list-projects-request-next-token-string-structure.json",
+  "name": "ListProjectsRequestNextTokenString",
+  "description": "ListProjectsRequestNextTokenString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 10000
+}

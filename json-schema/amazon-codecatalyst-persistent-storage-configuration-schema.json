@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-persistent-storage-configuration-schema.json",
+  "title": "PersistentStorageConfiguration",
+  "description": "Information about the configuration of persistent storage for a Dev Environment. ",
+  "type": "object",
+  "properties": {
+    "sizeInGiB": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PersistentStorageConfigurationSizeInGiBInteger"
+        },
+        {
+          "description": "<p>The size of the persistent storage in gigabytes (specifically GiB).</p> <note> <p>Valid values for storage are based on memory sizes in 16GB increments. Valid values are 16, 32, and 64.</p> </note>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "sizeInGiB"
+  ]
+}

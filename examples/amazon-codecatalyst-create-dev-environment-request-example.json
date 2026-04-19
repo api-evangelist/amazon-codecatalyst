@@ -1,0 +1,9 @@
+{
+  "repositories": "example-value",
+  "clientToken": "example-value",
+  "alias": "example-value",
+  "ides": "500123",
+  "instanceType": "STANDARD",
+  "inactivityTimeoutMinutes": "example-value",
+  "persistentStorage": "example-value"
+}

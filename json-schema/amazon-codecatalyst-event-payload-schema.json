@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-event-payload-schema.json",
+  "title": "EventPayload",
+  "description": "Information about the payload of an event recording Amazon CodeCatalyst activity.",
+  "type": "object",
+  "properties": {
+    "contentType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The type of content in the event payload."
+        }
+      ]
+    },
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The data included in the event payload."
+        }
+      ]
+    }
+  }
+}

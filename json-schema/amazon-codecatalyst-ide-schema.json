@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-ide-schema.json",
+  "title": "Ide",
+  "description": "Information about an integrated development environment (IDE) used in a Dev Environment.",
+  "type": "object",
+  "properties": {
+    "runtime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdeRuntimeString"
+        },
+        {
+          "description": "A link to the IDE runtime image."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdeNameString"
+        },
+        {
+          "description": "The name of the IDE."
+        }
+      ]
+    }
+  }
+}

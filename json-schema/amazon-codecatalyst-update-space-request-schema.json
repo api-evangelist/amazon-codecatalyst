@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-update-space-request-schema.json",
+  "title": "UpdateSpaceRequest",
+  "description": "UpdateSpaceRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SpaceDescription"
+        },
+        {
+          "description": "The description of the space."
+        }
+      ]
+    }
+  }
+}

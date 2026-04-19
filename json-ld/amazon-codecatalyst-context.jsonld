@@ -1,0 +1,397 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "amazon-code-catalyst": "https://amazon-code-catalyst.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CreateAccessTokenResponse": "amazon-code-catalyst:CreateAccessTokenResponse",
+    "CreateDevEnvironmentResponse": "amazon-code-catalyst:CreateDevEnvironmentResponse",
+    "RepositoryInput": "amazon-code-catalyst:RepositoryInput",
+    "IdeConfiguration": "amazon-code-catalyst:IdeConfiguration",
+    "CreateProjectResponse": "amazon-code-catalyst:CreateProjectResponse",
+    "CreateSourceRepositoryResponse": "amazon-code-catalyst:CreateSourceRepositoryResponse",
+    "CreateSourceRepositoryBranchResponse": "amazon-code-catalyst:CreateSourceRepositoryBranchResponse",
+    "DeleteAccessTokenResponse": "amazon-code-catalyst:DeleteAccessTokenResponse",
+    "DeleteDevEnvironmentResponse": "amazon-code-catalyst:DeleteDevEnvironmentResponse",
+    "DeleteProjectResponse": "amazon-code-catalyst:DeleteProjectResponse",
+    "DeleteSourceRepositoryResponse": "amazon-code-catalyst:DeleteSourceRepositoryResponse",
+    "DeleteSpaceResponse": "amazon-code-catalyst:DeleteSpaceResponse",
+    "GetDevEnvironmentResponse": "amazon-code-catalyst:GetDevEnvironmentResponse",
+    "GetProjectResponse": "amazon-code-catalyst:GetProjectResponse",
+    "GetSourceRepositoryResponse": "amazon-code-catalyst:GetSourceRepositoryResponse",
+    "GetSourceRepositoryCloneUrlsResponse": "amazon-code-catalyst:GetSourceRepositoryCloneUrlsResponse",
+    "GetSpaceResponse": "amazon-code-catalyst:GetSpaceResponse",
+    "GetSubscriptionResponse": "amazon-code-catalyst:GetSubscriptionResponse",
+    "GetUserDetailsResponse": "amazon-code-catalyst:GetUserDetailsResponse",
+    "ListAccessTokensResponse": "amazon-code-catalyst:ListAccessTokensResponse",
+    "ListDevEnvironmentSessionsResponse": "amazon-code-catalyst:ListDevEnvironmentSessionsResponse",
+    "ListDevEnvironmentsResponse": "amazon-code-catalyst:ListDevEnvironmentsResponse",
+    "Filter": "amazon-code-catalyst:Filter",
+    "ListEventLogsResponse": "amazon-code-catalyst:ListEventLogsResponse",
+    "ListProjectsResponse": "amazon-code-catalyst:ListProjectsResponse",
+    "ProjectListFilter": "amazon-code-catalyst:ProjectListFilter",
+    "ListSourceRepositoriesResponse": "amazon-code-catalyst:ListSourceRepositoriesResponse",
+    "ListSourceRepositoryBranchesResponse": "amazon-code-catalyst:ListSourceRepositoryBranchesResponse",
+    "ListSpacesResponse": "amazon-code-catalyst:ListSpacesResponse",
+    "StartDevEnvironmentResponse": "amazon-code-catalyst:StartDevEnvironmentResponse",
+    "StartDevEnvironmentSessionResponse": "amazon-code-catalyst:StartDevEnvironmentSessionResponse",
+    "ExecuteCommandSessionConfiguration": "amazon-code-catalyst:ExecuteCommandSessionConfiguration",
+    "StopDevEnvironmentResponse": "amazon-code-catalyst:StopDevEnvironmentResponse",
+    "StopDevEnvironmentSessionResponse": "amazon-code-catalyst:StopDevEnvironmentSessionResponse",
+    "UpdateDevEnvironmentResponse": "amazon-code-catalyst:UpdateDevEnvironmentResponse",
+    "UpdateProjectResponse": "amazon-code-catalyst:UpdateProjectResponse",
+    "UpdateSpaceResponse": "amazon-code-catalyst:UpdateSpaceResponse",
+    "VerifySessionResponse": "amazon-code-catalyst:VerifySessionResponse",
+    "AccessTokenSummary": "amazon-code-catalyst:AccessTokenSummary",
+    "CreateAccessTokenRequest": "amazon-code-catalyst:CreateAccessTokenRequest",
+    "PersistentStorageConfiguration": "amazon-code-catalyst:PersistentStorageConfiguration",
+    "CreateDevEnvironmentRequest": "amazon-code-catalyst:CreateDevEnvironmentRequest",
+    "CreateProjectRequest": "amazon-code-catalyst:CreateProjectRequest",
+    "CreateSourceRepositoryBranchRequest": "amazon-code-catalyst:CreateSourceRepositoryBranchRequest",
+    "CreateSourceRepositoryRequest": "amazon-code-catalyst:CreateSourceRepositoryRequest",
+    "DeleteAccessTokenRequest": "amazon-code-catalyst:DeleteAccessTokenRequest",
+    "DeleteDevEnvironmentRequest": "amazon-code-catalyst:DeleteDevEnvironmentRequest",
+    "DeleteProjectRequest": "amazon-code-catalyst:DeleteProjectRequest",
+    "DeleteSourceRepositoryRequest": "amazon-code-catalyst:DeleteSourceRepositoryRequest",
+    "DeleteSpaceRequest": "amazon-code-catalyst:DeleteSpaceRequest",
+    "DevEnvironmentAccessDetails": "amazon-code-catalyst:DevEnvironmentAccessDetails",
+    "DevEnvironmentRepositorySummary": "amazon-code-catalyst:DevEnvironmentRepositorySummary",
+    "DevEnvironmentSessionConfiguration": "amazon-code-catalyst:DevEnvironmentSessionConfiguration",
+    "DevEnvironmentSessionSummary": "amazon-code-catalyst:DevEnvironmentSessionSummary",
+    "PersistentStorage": "amazon-code-catalyst:PersistentStorage",
+    "DevEnvironmentSummary": "amazon-code-catalyst:DevEnvironmentSummary",
+    "EmailAddress": "amazon-code-catalyst:EmailAddress",
+    "EventLogEntry": "amazon-code-catalyst:EventLogEntry",
+    "UserIdentity": "amazon-code-catalyst:UserIdentity",
+    "ProjectInformation": "amazon-code-catalyst:ProjectInformation",
+    "EventPayload": "amazon-code-catalyst:EventPayload",
+    "GetDevEnvironmentRequest": "amazon-code-catalyst:GetDevEnvironmentRequest",
+    "GetProjectRequest": "amazon-code-catalyst:GetProjectRequest",
+    "GetSourceRepositoryCloneUrlsRequest": "amazon-code-catalyst:GetSourceRepositoryCloneUrlsRequest",
+    "GetSourceRepositoryRequest": "amazon-code-catalyst:GetSourceRepositoryRequest",
+    "GetSpaceRequest": "amazon-code-catalyst:GetSpaceRequest",
+    "GetSubscriptionRequest": "amazon-code-catalyst:GetSubscriptionRequest",
+    "GetUserDetailsRequest": "amazon-code-catalyst:GetUserDetailsRequest",
+    "Ide": "amazon-code-catalyst:Ide",
+    "ListAccessTokensRequest": "amazon-code-catalyst:ListAccessTokensRequest",
+    "ListDevEnvironmentSessionsRequest": "amazon-code-catalyst:ListDevEnvironmentSessionsRequest",
+    "ListDevEnvironmentsRequest": "amazon-code-catalyst:ListDevEnvironmentsRequest",
+    "ListEventLogsRequest": "amazon-code-catalyst:ListEventLogsRequest",
+    "ListProjectsRequest": "amazon-code-catalyst:ListProjectsRequest",
+    "ListSourceRepositoriesItem": "amazon-code-catalyst:ListSourceRepositoriesItem",
+    "ListSourceRepositoriesRequest": "amazon-code-catalyst:ListSourceRepositoriesRequest",
+    "ListSourceRepositoryBranchesItem": "amazon-code-catalyst:ListSourceRepositoryBranchesItem",
+    "ListSourceRepositoryBranchesRequest": "amazon-code-catalyst:ListSourceRepositoryBranchesRequest",
+    "ListSpacesRequest": "amazon-code-catalyst:ListSpacesRequest",
+    "ProjectSummary": "amazon-code-catalyst:ProjectSummary",
+    "SpaceSummary": "amazon-code-catalyst:SpaceSummary",
+    "StartDevEnvironmentRequest": "amazon-code-catalyst:StartDevEnvironmentRequest",
+    "StartDevEnvironmentSessionRequest": "amazon-code-catalyst:StartDevEnvironmentSessionRequest",
+    "StopDevEnvironmentRequest": "amazon-code-catalyst:StopDevEnvironmentRequest",
+    "StopDevEnvironmentSessionRequest": "amazon-code-catalyst:StopDevEnvironmentSessionRequest",
+    "UpdateDevEnvironmentRequest": "amazon-code-catalyst:UpdateDevEnvironmentRequest",
+    "UpdateProjectRequest": "amazon-code-catalyst:UpdateProjectRequest",
+    "UpdateSpaceRequest": "amazon-code-catalyst:UpdateSpaceRequest",
+    "secret": {
+      "@id": "amazon-code-catalyst:secret",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "expiresTime": {
+      "@id": "amazon-code-catalyst:expiresTime",
+      "@type": "xsd:string"
+    },
+    "accessTokenId": {
+      "@id": "amazon-code-catalyst:accessTokenId",
+      "@type": "xsd:string"
+    },
+    "spaceName": {
+      "@id": "amazon-code-catalyst:spaceName",
+      "@type": "xsd:string"
+    },
+    "projectName": {
+      "@id": "amazon-code-catalyst:projectName",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "amazon-code-catalyst:id",
+      "@type": "xsd:string"
+    },
+    "repositoryName": {
+      "@id": "amazon-code-catalyst:repositoryName",
+      "@type": "xsd:string"
+    },
+    "branchName": {
+      "@id": "amazon-code-catalyst:branchName",
+      "@type": "xsd:string"
+    },
+    "runtime": {
+      "@id": "amazon-code-catalyst:runtime",
+      "@type": "xsd:string"
+    },
+    "displayName": {
+      "@id": "amazon-code-catalyst:displayName",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "ref": {
+      "@id": "amazon-code-catalyst:ref",
+      "@type": "xsd:string"
+    },
+    "lastUpdatedTime": {
+      "@id": "amazon-code-catalyst:lastUpdatedTime",
+      "@type": "xsd:string"
+    },
+    "headCommitId": {
+      "@id": "amazon-code-catalyst:headCommitId",
+      "@type": "xsd:string"
+    },
+    "creatorId": {
+      "@id": "amazon-code-catalyst:creatorId",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "amazon-code-catalyst:status",
+      "@type": "xsd:string"
+    },
+    "statusReason": {
+      "@id": "amazon-code-catalyst:statusReason",
+      "@type": "xsd:string"
+    },
+    "repositories": {
+      "@id": "amazon-code-catalyst:repositories",
+      "@type": "xsd:string"
+    },
+    "alias": {
+      "@id": "amazon-code-catalyst:alias",
+      "@type": "xsd:string"
+    },
+    "ides": {
+      "@id": "amazon-code-catalyst:ides",
+      "@type": "xsd:string"
+    },
+    "instanceType": {
+      "@id": "amazon-code-catalyst:instanceType",
+      "@type": "xsd:string"
+    },
+    "inactivityTimeoutMinutes": {
+      "@id": "amazon-code-catalyst:inactivityTimeoutMinutes",
+      "@type": "xsd:string"
+    },
+    "persistentStorage": {
+      "@id": "amazon-code-catalyst:persistentStorage",
+      "@type": "xsd:string"
+    },
+    "createdTime": {
+      "@id": "amazon-code-catalyst:createdTime",
+      "@type": "xsd:string"
+    },
+    "https": {
+      "@id": "amazon-code-catalyst:https",
+      "@type": "xsd:string"
+    },
+    "regionName": {
+      "@id": "amazon-code-catalyst:regionName",
+      "@type": "xsd:string"
+    },
+    "subscriptionType": {
+      "@id": "amazon-code-catalyst:subscriptionType",
+      "@type": "xsd:string"
+    },
+    "awsAccountName": {
+      "@id": "amazon-code-catalyst:awsAccountName",
+      "@type": "xsd:string"
+    },
+    "userId": {
+      "@id": "amazon-code-catalyst:userId",
+      "@type": "xsd:string"
+    },
+    "userName": {
+      "@id": "amazon-code-catalyst:userName",
+      "@type": "xsd:string"
+    },
+    "primaryEmail": {
+      "@id": "amazon-code-catalyst:primaryEmail",
+      "@type": "xsd:string"
+    },
+    "version": "schema:version",
+    "items": {
+      "@id": "amazon-code-catalyst:items",
+      "@type": "xsd:string"
+    },
+    "nextToken": {
+      "@id": "amazon-code-catalyst:nextToken",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "amazon-code-catalyst:key",
+      "@type": "xsd:string"
+    },
+    "values": {
+      "@id": "amazon-code-catalyst:values",
+      "@type": "xsd:string"
+    },
+    "comparisonOperator": {
+      "@id": "amazon-code-catalyst:comparisonOperator",
+      "@type": "xsd:string"
+    },
+    "accessDetails": {
+      "@id": "amazon-code-catalyst:accessDetails",
+      "@type": "xsd:string"
+    },
+    "sessionId": {
+      "@id": "amazon-code-catalyst:sessionId",
+      "@type": "xsd:string"
+    },
+    "command": {
+      "@id": "amazon-code-catalyst:command",
+      "@type": "xsd:string"
+    },
+    "arguments": {
+      "@id": "amazon-code-catalyst:arguments",
+      "@type": "xsd:string"
+    },
+    "clientToken": {
+      "@id": "amazon-code-catalyst:clientToken",
+      "@type": "xsd:string"
+    },
+    "identity": {
+      "@id": "amazon-code-catalyst:identity",
+      "@type": "xsd:string"
+    },
+    "sizeInGiB": {
+      "@id": "amazon-code-catalyst:sizeInGiB",
+      "@type": "xsd:string"
+    },
+    "streamUrl": {
+      "@id": "amazon-code-catalyst:streamUrl",
+      "@type": "xsd:string"
+    },
+    "tokenValue": {
+      "@id": "amazon-code-catalyst:tokenValue",
+      "@type": "xsd:string"
+    },
+    "sessionType": {
+      "@id": "amazon-code-catalyst:sessionType",
+      "@type": "xsd:string"
+    },
+    "executeCommandSessionConfiguration": {
+      "@id": "amazon-code-catalyst:executeCommandSessionConfiguration",
+      "@type": "xsd:string"
+    },
+    "devEnvironmentId": {
+      "@id": "amazon-code-catalyst:devEnvironmentId",
+      "@type": "xsd:string"
+    },
+    "startedTime": {
+      "@id": "amazon-code-catalyst:startedTime",
+      "@type": "xsd:string"
+    },
+    "email": "schema:email",
+    "verified": {
+      "@id": "amazon-code-catalyst:verified",
+      "@type": "xsd:string"
+    },
+    "eventName": {
+      "@id": "amazon-code-catalyst:eventName",
+      "@type": "xsd:string"
+    },
+    "eventType": {
+      "@id": "amazon-code-catalyst:eventType",
+      "@type": "xsd:string"
+    },
+    "eventCategory": {
+      "@id": "amazon-code-catalyst:eventCategory",
+      "@type": "xsd:string"
+    },
+    "eventSource": {
+      "@id": "amazon-code-catalyst:eventSource",
+      "@type": "xsd:string"
+    },
+    "eventTime": {
+      "@id": "amazon-code-catalyst:eventTime",
+      "@type": "xsd:string"
+    },
+    "operationType": {
+      "@id": "amazon-code-catalyst:operationType",
+      "@type": "xsd:string"
+    },
+    "userIdentity": {
+      "@id": "amazon-code-catalyst:userIdentity",
+      "@type": "xsd:string"
+    },
+    "projectInformation": {
+      "@id": "amazon-code-catalyst:projectInformation",
+      "@type": "xsd:string"
+    },
+    "requestId": {
+      "@id": "amazon-code-catalyst:requestId",
+      "@type": "xsd:string"
+    },
+    "requestPayload": {
+      "@id": "amazon-code-catalyst:requestPayload",
+      "@type": "xsd:string"
+    },
+    "responsePayload": {
+      "@id": "amazon-code-catalyst:responsePayload",
+      "@type": "xsd:string"
+    },
+    "errorCode": {
+      "@id": "amazon-code-catalyst:errorCode",
+      "@type": "xsd:string"
+    },
+    "sourceIpAddress": {
+      "@id": "amazon-code-catalyst:sourceIpAddress",
+      "@type": "xsd:string"
+    },
+    "userAgent": {
+      "@id": "amazon-code-catalyst:userAgent",
+      "@type": "xsd:string"
+    },
+    "userType": {
+      "@id": "amazon-code-catalyst:userType",
+      "@type": "xsd:string"
+    },
+    "principalId": {
+      "@id": "amazon-code-catalyst:principalId",
+      "@type": "xsd:string"
+    },
+    "awsAccountId": {
+      "@id": "amazon-code-catalyst:awsAccountId",
+      "@type": "xsd:string"
+    },
+    "projectId": {
+      "@id": "amazon-code-catalyst:projectId",
+      "@type": "xsd:string"
+    },
+    "contentType": {
+      "@id": "amazon-code-catalyst:contentType",
+      "@type": "xsd:string"
+    },
+    "data": {
+      "@id": "amazon-code-catalyst:data",
+      "@type": "xsd:string"
+    },
+    "maxResults": {
+      "@id": "amazon-code-catalyst:maxResults",
+      "@type": "xsd:string"
+    },
+    "filters": {
+      "@id": "amazon-code-catalyst:filters",
+      "@type": "xsd:string"
+    },
+    "startTime": {
+      "@id": "amazon-code-catalyst:startTime",
+      "@type": "xsd:string"
+    },
+    "endTime": {
+      "@id": "amazon-code-catalyst:endTime",
+      "@type": "xsd:string"
+    },
+    "sessionConfiguration": {
+      "@id": "amazon-code-catalyst:sessionConfiguration",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-user-identity-schema.json",
+  "title": "UserIdentity",
+  "description": "Information about a user whose activity is recorded in an event for a space.",
+  "type": "object",
+  "properties": {
+    "userType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserType"
+        },
+        {
+          "description": "The role assigned to the user in a Amazon CodeCatalyst space or project when the event occurred."
+        }
+      ]
+    },
+    "principalId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The ID of the Amazon CodeCatalyst service principal."
+        }
+      ]
+    },
+    "userName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The display name of the user in Amazon CodeCatalyst."
+        }
+      ]
+    },
+    "awsAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The Amazon Web Services account number of the user in Amazon Web Services, if any."
+        }
+      ]
+    }
+  },
+  "required": [
+    "userType",
+    "principalId"
+  ]
+}

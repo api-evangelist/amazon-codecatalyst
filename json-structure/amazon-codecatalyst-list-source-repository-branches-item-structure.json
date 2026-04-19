@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-list-source-repository-branches-item-structure.json",
+  "name": "ListSourceRepositoryBranchesItem",
+  "description": "Information about a branch of a source repository returned in a list of branches.",
+  "type": "object",
+  "properties": {
+    "ref": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryBranchRefString"
+        },
+        {
+          "description": "The Git reference name of the branch."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryBranchString"
+        },
+        {
+          "description": "The name of the branch."
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The time the branch was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    },
+    "headCommitId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The commit ID of the tip of the branch at the time of the request, also known as the head commit."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-source-repository-branch-string-schema.json",
+  "title": "SourceRepositoryBranchString",
+  "description": "SourceRepositoryBranchString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 100
+}

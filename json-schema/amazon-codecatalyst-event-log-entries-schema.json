@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-event-log-entries-schema.json",
+  "title": "EventLogEntries",
+  "description": "EventLogEntries schema from Amazon CodeCatalyst",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/EventLogEntry"
+  }
+}

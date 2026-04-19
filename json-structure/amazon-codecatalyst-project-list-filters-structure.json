@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-project-list-filters-structure.json",
+  "name": "ProjectListFilters",
+  "description": "ProjectListFilters schema from Amazon CodeCatalyst",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ProjectListFilter"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-stop-dev-environment-session-response-session-id-string-schema.json",
+  "title": "StopDevEnvironmentSessionResponseSessionIdString",
+  "description": "StopDevEnvironmentSessionResponseSessionIdString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 96
+}

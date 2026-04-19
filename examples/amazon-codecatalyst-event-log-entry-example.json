@@ -1,0 +1,10 @@
+{
+  "id": "500123",
+  "eventName": "example-resource",
+  "eventType": "STANDARD",
+  "eventCategory": "example-value",
+  "eventSource": "example-value",
+  "eventTime": "example-value",
+  "operationType": "STANDARD",
+  "userIdentity": "500123"
+}

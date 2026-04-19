@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-status-structure.json",
+  "name": "DevEnvironmentStatus",
+  "description": "DevEnvironmentStatus schema from Amazon CodeCatalyst",
+  "type": "string",
+  "enum": [
+    "PENDING",
+    "RUNNING",
+    "STARTING",
+    "STOPPING",
+    "STOPPED",
+    "FAILED",
+    "DELETING",
+    "DELETED"
+  ]
+}

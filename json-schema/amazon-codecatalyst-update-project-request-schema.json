@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-update-project-request-schema.json",
+  "title": "UpdateProjectRequest",
+  "description": "UpdateProjectRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProjectDescription"
+        },
+        {
+          "description": "The description of the project."
+        }
+      ]
+    }
+  }
+}

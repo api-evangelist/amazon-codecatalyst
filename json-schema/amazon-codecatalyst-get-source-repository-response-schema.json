@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-get-source-repository-response-schema.json",
+  "title": "GetSourceRepositoryResponse",
+  "description": "GetSourceRepositoryResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryNameString"
+        },
+        {
+          "description": "The name of the source repository."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryDescriptionString"
+        },
+        {
+          "description": "The description of the source repository."
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time the source repository was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    },
+    "createdTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time the source repository was created, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    }
+  },
+  "required": [
+    "spaceName",
+    "projectName",
+    "name",
+    "lastUpdatedTime",
+    "createdTime"
+  ]
+}

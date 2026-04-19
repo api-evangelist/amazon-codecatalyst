@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-project-summary-schema.json",
+  "title": "ProjectSummary",
+  "description": "Information about a project.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The friendly name displayed to users of the project in Amazon CodeCatalyst."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The description of the project."
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

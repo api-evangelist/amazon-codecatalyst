@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-session-type-structure.json",
+  "name": "DevEnvironmentSessionType",
+  "description": "DevEnvironmentSessionType schema from Amazon CodeCatalyst",
+  "type": "string",
+  "enum": [
+    "SSM",
+    "SSH"
+  ]
+}

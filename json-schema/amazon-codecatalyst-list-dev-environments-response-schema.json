@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-list-dev-environments-response-schema.json",
+  "title": "ListDevEnvironmentsResponse",
+  "description": "ListDevEnvironmentsResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "items": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentSummaryList"
+        },
+        {
+          "description": "Information about the Dev Environments in a project."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A token returned from a call to this API to indicate the next batch of results to return, if any."
+        }
+      ]
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-project-display-name-schema.json",
+  "title": "ProjectDisplayName",
+  "description": "ProjectDisplayName schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9]+(?:[-_\\. ][a-zA-Z0-9]+)*",
+  "minLength": 3,
+  "maxLength": 63
+}

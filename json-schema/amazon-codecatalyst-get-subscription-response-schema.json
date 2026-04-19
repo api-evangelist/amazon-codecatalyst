@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-get-subscription-response-schema.json",
+  "title": "GetSubscriptionResponse",
+  "description": "GetSubscriptionResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "subscriptionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The type of the billing plan for the space."
+        }
+      ]
+    },
+    "awsAccountName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The display name of the Amazon Web Services account used for billing for the space."
+        }
+      ]
+    }
+  }
+}

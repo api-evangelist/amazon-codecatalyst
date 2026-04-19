@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-create-project-request-schema.json",
+  "title": "CreateProjectRequest",
+  "description": "CreateProjectRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProjectDisplayName"
+        },
+        {
+          "description": "The friendly name of the project that will be displayed to users."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProjectDescription"
+        },
+        {
+          "description": "The description of the project. This description will be displayed to all users of the project. We recommend providing a brief description of the project and its intended purpose."
+        }
+      ]
+    }
+  },
+  "required": [
+    "displayName"
+  ]
+}

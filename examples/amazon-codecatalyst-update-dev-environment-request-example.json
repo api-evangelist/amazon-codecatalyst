@@ -1,0 +1,7 @@
+{
+  "alias": "example-value",
+  "ides": "500123",
+  "instanceType": "STANDARD",
+  "inactivityTimeoutMinutes": "example-value",
+  "clientToken": "example-value"
+}

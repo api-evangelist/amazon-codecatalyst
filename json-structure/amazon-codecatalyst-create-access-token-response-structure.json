@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-create-access-token-response-structure.json",
+  "name": "CreateAccessTokenResponse",
+  "description": "CreateAccessTokenResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "secret": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessTokenSecret"
+        },
+        {
+          "description": "The secret value of the personal access token."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessTokenName"
+        },
+        {
+          "description": "The friendly name of the personal access token."
+        }
+      ]
+    },
+    "expiresTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The date and time the personal access token expires, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>. If not specified, the default is one year from creation."
+        }
+      ]
+    },
+    "accessTokenId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessTokenId"
+        },
+        {
+          "description": "The system-generated unique ID of the access token."
+        }
+      ]
+    }
+  },
+  "required": [
+    "secret",
+    "name",
+    "expiresTime",
+    "accessTokenId"
+  ]
+}

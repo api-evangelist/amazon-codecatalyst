@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-persistent-storage-size-in-gi-b-integer-schema.json",
+  "title": "PersistentStorageSizeInGiBInteger",
+  "description": "PersistentStorageSizeInGiBInteger schema from Amazon CodeCatalyst",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 64
+}

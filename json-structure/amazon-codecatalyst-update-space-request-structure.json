@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-update-space-request-structure.json",
+  "name": "UpdateSpaceRequest",
+  "description": "UpdateSpaceRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SpaceDescription"
+        },
+        {
+          "description": "The description of the space."
+        }
+      ]
+    }
+  }
+}

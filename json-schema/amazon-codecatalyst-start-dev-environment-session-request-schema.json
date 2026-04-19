@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-start-dev-environment-session-request-schema.json",
+  "title": "StartDevEnvironmentSessionRequest",
+  "description": "StartDevEnvironmentSessionRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "sessionConfiguration": {
+      "$ref": "#/components/schemas/DevEnvironmentSessionConfiguration"
+    }
+  },
+  "required": [
+    "sessionConfiguration"
+  ]
+}

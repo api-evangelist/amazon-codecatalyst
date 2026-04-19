@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-create-source-repository-request-structure.json",
+  "name": "CreateSourceRepositoryRequest",
+  "description": "CreateSourceRepositoryRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryDescriptionString"
+        },
+        {
+          "description": "The description of the source repository."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon CodeCatalyst
+  description: Complete taxonomy of Amazon CodeCatalyst APIs covering developer collaboration, project management, and CI/CD workflows.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon CodeCatalyst API
+    namespace: codecatalyst
+    version: '2022-09-28'
+    baseUrl: http://codecatalyst.global.api.aws
+    status: active
+  resources:
+  - name: v1
+    apis:
+    - Amazon CodeCatalyst API
+    actions: &id001
+    - CreateAccessToken
+    - ListAccessTokens
+    - CreateDevEnvironment
+    - ListDevEnvironments
+    - CreateProject
+    - ListProjects
+    - CreateSourceRepository
+    - DeleteSourceRepository
+    - GetSourceRepository
+    - CreateSourceRepositoryBranch
+    - DeleteAccessToken
+    - DeleteDevEnvironment
+    - GetDevEnvironment
+    - UpdateDevEnvironment
+    - DeleteProject
+    - GetProject
+    - UpdateProject
+    - DeleteSpace
+    - GetSpace
+    - UpdateSpace
+    - GetSourceRepositoryCloneUrls
+    - GetSubscription
+    - ListDevEnvironmentSessions
+    - ListEventLogs
+    - ListSourceRepositories
+    - ListSourceRepositoryBranches
+    - ListSpaces
+    - StartDevEnvironment
+    - StartDevEnvironmentSession
+    - StopDevEnvironment
+    - StopDevEnvironmentSession
+  - name: userDetails
+    apis:
+    - Amazon CodeCatalyst API
+    actions: &id002
+    - GetUserDetails
+  - name: session
+    apis:
+    - Amazon CodeCatalyst API
+    actions: &id003
+    - VerifySession
+  actions:
+  - name: list
+    httpMethods:
+    - GET
+    pattern: read
+  - name: create
+    httpMethods:
+    - POST
+    pattern: write
+  - name: delete
+    httpMethods:
+    - DELETE
+    pattern: destructive
+  - name: update
+    httpMethods:
+    - PUT
+    - PATCH
+    pattern: write
+  - name: get
+    httpMethods:
+    - GET
+    pattern: read
+  schemas:
+    core: []
+  parameters:
+    identifiers:
+    - spaceName
+    - projectName
+    - id
+    pagination:
+    - nextToken
+    - maxResults
+  enums:
+    devEnvironmentStatus:
+    - PENDING
+    - RUNNING
+    - STARTING
+    - STOPPING
+    - STOPPED
+    - FAILED
+    - DELETING
+    - DELETED
+  authentication:
+    schemes:
+    - Bearer Token
+    tokenEndpoint: https://codecatalyst.aws/
+capability:
+  workflows:
+  - name: Developer Collaboration
+    file: capabilities/amazon-codecatalyst-developer-collaboration.yaml
+    description: Project and workflow management for development teams.
+    toolCount: 10
+    personas:
+    - Developer
+    - DevOps Engineer
+    domains:
+    - CI/CD
+    - Collaboration
+  personas:
+  - id: developer
+    name: Developer
+    description: Writes code and manages repos and Dev Environments.
+    workflows:
+    - Developer Collaboration
+  - id: devops-engineer
+    name: DevOps Engineer
+    description: Manages CI/CD workflows and project automation.
+    workflows:
+    - Developer Collaboration
+  domains:
+  - name: CI/CD
+    description: Continuous integration and deployment workflows.
+  - name: Collaboration
+    description: Team collaboration on code and projects.
+  namespaces:
+  - type: consumed
+    name: codecatalyst
+    port:
+  - type: rest
+    name: codecatalyst-collab-api
+    port: 8080
+  - type: mcp
+    name: codecatalyst-collab-mcp
+    port: 9090
+  binds:
+  - CODECATALYST_TOKEN
+crossReference:
+- resource: v1
+  operations: *id001
+  workflows:
+  - Developer Collaboration
+  personas:
+  - Developer
+- resource: userDetails
+  operations: *id002
+  workflows:
+  - Developer Collaboration
+  personas:
+  - Developer
+- resource: session
+  operations: *id003
+  workflows:
+  - Developer Collaboration
+  personas:
+  - Developer

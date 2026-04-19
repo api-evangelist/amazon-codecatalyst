@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-dev-environment-repository-summary-schema.json",
+  "title": "DevEnvironmentRepositorySummary",
+  "description": "Information about the source repsitory for a Dev Environment. ",
+  "type": "object",
+  "properties": {
+    "repositoryName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryNameString"
+        },
+        {
+          "description": "The name of the source repository."
+        }
+      ]
+    },
+    "branchName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceRepositoryBranchString"
+        },
+        {
+          "description": "The name of the branch in a source repository cloned into the Dev Environment. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "repositoryName"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-stop-dev-environment-session-response-schema.json",
+  "title": "StopDevEnvironmentSessionResponse",
+  "description": "StopDevEnvironmentSessionResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment."
+        }
+      ]
+    },
+    "sessionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StopDevEnvironmentSessionResponseSessionIdString"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment session."
+        }
+      ]
+    }
+  },
+  "required": [
+    "spaceName",
+    "projectName",
+    "id",
+    "sessionId"
+  ]
+}

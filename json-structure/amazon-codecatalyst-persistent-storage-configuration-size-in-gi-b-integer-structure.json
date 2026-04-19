@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-persistent-storage-configuration-size-in-gi-b-integer-structure.json",
+  "name": "PersistentStorageConfigurationSizeInGiBInteger",
+  "description": "PersistentStorageConfigurationSizeInGiBInteger schema from Amazon CodeCatalyst",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 64
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-execute-command-session-configuration-schema.json",
+  "title": "ExecuteCommandSessionConfiguration",
+  "description": "Information about the commands that will be run on a Dev Environment when an SSH session begins.",
+  "type": "object",
+  "properties": {
+    "command": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecuteCommandSessionConfigurationCommandString"
+        },
+        {
+          "description": "The command used at the beginning of the SSH session to a Dev Environment."
+        }
+      ]
+    },
+    "arguments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecuteCommandSessionConfigurationArguments"
+        },
+        {
+          "description": "An array of arguments containing arguments and members."
+        }
+      ]
+    }
+  },
+  "required": [
+    "command"
+  ]
+}

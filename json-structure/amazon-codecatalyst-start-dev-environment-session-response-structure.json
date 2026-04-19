@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-start-dev-environment-session-response-structure.json",
+  "name": "StartDevEnvironmentSessionResponse",
+  "description": "StartDevEnvironmentSessionResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "accessDetails": {
+      "$ref": "#/components/schemas/DevEnvironmentAccessDetails"
+    },
+    "sessionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StartDevEnvironmentSessionResponseSessionIdString"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment session."
+        }
+      ]
+    },
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment."
+        }
+      ]
+    }
+  },
+  "required": [
+    "accessDetails",
+    "spaceName",
+    "projectName",
+    "id"
+  ]
+}

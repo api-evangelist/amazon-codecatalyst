@@ -1,0 +1,10 @@
+{
+  "id": "500123",
+  "spaceName": "example-resource",
+  "projectName": "example-resource",
+  "alias": "example-value",
+  "ides": "500123",
+  "instanceType": "STANDARD",
+  "inactivityTimeoutMinutes": "example-value",
+  "clientToken": "example-value"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-list-source-repository-branches-response-structure.json",
+  "name": "ListSourceRepositoryBranchesResponse",
+  "description": "ListSourceRepositoryBranchesResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A token returned from a call to this API to indicate the next batch of results to return, if any."
+        }
+      ]
+    },
+    "items": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListSourceRepositoryBranchesItems"
+        },
+        {
+          "description": "Information about the source branches."
+        }
+      ]
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

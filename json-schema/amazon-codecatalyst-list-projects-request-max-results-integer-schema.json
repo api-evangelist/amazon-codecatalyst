@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-list-projects-request-max-results-integer-schema.json",
+  "title": "ListProjectsRequestMaxResultsInteger",
+  "description": "ListProjectsRequestMaxResultsInteger schema from Amazon CodeCatalyst",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 100
+}

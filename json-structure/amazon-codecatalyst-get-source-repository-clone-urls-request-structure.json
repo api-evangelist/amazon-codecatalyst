@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-get-source-repository-clone-urls-request-structure.json",
+  "name": "GetSourceRepositoryCloneUrlsRequest",
+  "description": "GetSourceRepositoryCloneUrlsRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {}
+}

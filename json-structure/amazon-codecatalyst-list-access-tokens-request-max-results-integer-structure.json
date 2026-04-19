@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-list-access-tokens-request-max-results-integer-structure.json",
+  "name": "ListAccessTokensRequestMaxResultsInteger",
+  "description": "ListAccessTokensRequestMaxResultsInteger schema from Amazon CodeCatalyst",
+  "type": "int32",
+  "maximum": 10
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-execute-command-session-configuration-arguments-structure.json",
+  "name": "ExecuteCommandSessionConfigurationArguments",
+  "description": "ExecuteCommandSessionConfigurationArguments schema from Amazon CodeCatalyst",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ExecuteCommandSessionConfigurationArgumentsMemberString"
+  }
+}

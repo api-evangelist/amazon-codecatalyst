@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-session-configuration-structure.json",
+  "name": "DevEnvironmentSessionConfiguration",
+  "description": "Information about the configuration of a Dev Environment session.",
+  "type": "object",
+  "properties": {
+    "sessionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentSessionType"
+        },
+        {
+          "description": "The type of the session."
+        }
+      ]
+    },
+    "executeCommandSessionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExecuteCommandSessionConfiguration"
+        },
+        {
+          "description": "Information about optional commands that will be run on the Dev Environment when the SSH session begins."
+        }
+      ]
+    }
+  },
+  "required": [
+    "sessionType"
+  ]
+}

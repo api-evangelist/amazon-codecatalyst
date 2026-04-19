@@ -1,0 +1,6 @@
+{
+  "secret": "example-value",
+  "name": "example-resource",
+  "expiresTime": "example-value",
+  "accessTokenId": "500123"
+}

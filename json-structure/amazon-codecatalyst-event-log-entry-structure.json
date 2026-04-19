@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-event-log-entry-structure.json",
+  "name": "EventLogEntry",
+  "description": "Information about an entry in an event log of Amazon CodeCatalyst activity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The system-generated unique ID of the event."
+        }
+      ]
+    },
+    "eventName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the event."
+        }
+      ]
+    },
+    "eventType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The type of the event."
+        }
+      ]
+    },
+    "eventCategory": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The category for the event."
+        }
+      ]
+    },
+    "eventSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The source of the event."
+        }
+      ]
+    },
+    "eventTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The time the event took place, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    },
+    "operationType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OperationType"
+        },
+        {
+          "description": "The type of the event."
+        }
+      ]
+    },
+    "userIdentity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserIdentity"
+        },
+        {
+          "description": "The system-generated unique ID of the user whose actions are recorded in the event."
+        }
+      ]
+    },
+    "projectInformation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProjectInformation"
+        },
+        {
+          "description": "Information about the project where the event occurred."
+        }
+      ]
+    },
+    "requestId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The system-generated unique ID of the request."
+        }
+      ]
+    },
+    "requestPayload": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventPayload"
+        },
+        {
+          "description": "Information about the payload of the request."
+        }
+      ]
+    },
+    "responsePayload": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventPayload"
+        },
+        {
+          "description": "Information about the payload of the response, if any."
+        }
+      ]
+    },
+    "errorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The code of the error, if any."
+        }
+      ]
+    },
+    "sourceIpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The IP address of the user whose actions are recorded in the event."
+        }
+      ]
+    },
+    "userAgent": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The user agent whose actions are recorded in the event."
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "eventName",
+    "eventType",
+    "eventCategory",
+    "eventSource",
+    "eventTime",
+    "operationType",
+    "userIdentity"
+  ]
+}

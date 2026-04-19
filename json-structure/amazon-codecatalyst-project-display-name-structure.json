@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-project-display-name-structure.json",
+  "name": "ProjectDisplayName",
+  "description": "ProjectDisplayName schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9]+(?:[-_\\. ][a-zA-Z0-9]+)*",
+  "minLength": 3,
+  "maxLength": 63
+}

@@ -1,0 +1,132 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon CodeCatalyst Developer Collaboration
+  description: Unified workflow for development teams to collaborate on projects, manage spaces, workflows, and source repositories using Amazon CodeCatalyst.
+  tags:
+  - Amazon
+  - AWS
+  - Developer Collaboration
+  - CI/CD
+  - Project Management
+  - DevOps
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    CODECATALYST_TOKEN: CODECATALYST_TOKEN
+capability:
+  consumes:
+  - import: codecatalyst
+    location: ./shared/codecatalyst.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: codecatalyst-collab-api
+    description: Unified REST API for CodeCatalyst collaboration.
+    resources:
+    - path: /v1/spaces
+      name: spaces
+      description: Manage CodeCatalyst spaces
+    - path: /v1/projects
+      name: projects
+      description: Manage projects
+    - path: /v1/workflows
+      name: workflows
+      description: Manage CI/CD workflows
+  - type: mcp
+    port: 9090
+    namespace: codecatalyst-collab-mcp
+    transport: http
+    description: MCP server for AI-assisted development collaboration.
+    tools:
+    - name: list-spaces
+      description: List CodeCatalyst spaces
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listSpaces
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-projects
+      description: List projects in a space
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listProjects
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-project
+      description: Create a new project
+      hints:
+        readOnly: false
+        openWorld: false
+      call: codecatalyst.createProject
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-workflows
+      description: List workflows for a project
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listWorkflows
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: start-workflow-run
+      description: Start a workflow run
+      hints:
+        readOnly: false
+        openWorld: false
+      call: codecatalyst.startWorkflowRun
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-workflow-runs
+      description: List workflow runs
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listWorkflowRuns
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-source-repositories
+      description: List source repositories
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listSourceRepositories
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-source-repository
+      description: Create a source repository
+      hints:
+        readOnly: false
+        openWorld: false
+      call: codecatalyst.createSourceRepository
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-dev-environments
+      description: List Dev Environments
+      hints:
+        readOnly: true
+        openWorld: true
+      call: codecatalyst.listDevEnvironments
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-dev-environment
+      description: Create a cloud Dev Environment
+      hints:
+        readOnly: false
+        openWorld: false
+      call: codecatalyst.createDevEnvironment
+      outputParameters:
+      - type: object
+        mapping: $.

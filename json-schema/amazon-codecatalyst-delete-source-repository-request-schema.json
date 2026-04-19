@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-delete-source-repository-request-schema.json",
+  "title": "DeleteSourceRepositoryRequest",
+  "description": "DeleteSourceRepositoryRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {}
+}

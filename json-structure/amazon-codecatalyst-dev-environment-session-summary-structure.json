@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-session-summary-structure.json",
+  "name": "DevEnvironmentSessionSummary",
+  "description": "Information about active sessions for a Dev Environment.",
+  "type": "object",
+  "properties": {
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "devEnvironmentId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment."
+        }
+      ]
+    },
+    "startedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The date and time the session started, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a> "
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentSessionSummaryIdString"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment session."
+        }
+      ]
+    }
+  },
+  "required": [
+    "spaceName",
+    "projectName",
+    "devEnvironmentId",
+    "startedTime",
+    "id"
+  ]
+}

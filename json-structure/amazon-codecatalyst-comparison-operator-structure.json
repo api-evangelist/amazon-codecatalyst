@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-comparison-operator-structure.json",
+  "name": "ComparisonOperator",
+  "description": "ComparisonOperator schema from Amazon CodeCatalyst",
+  "type": "string",
+  "enum": [
+    "EQ",
+    "GT",
+    "GE",
+    "LT",
+    "LE"
+  ]
+}

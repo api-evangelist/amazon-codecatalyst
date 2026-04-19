@@ -1,0 +1,10 @@
+{
+  "spaceName": "example-resource",
+  "projectName": "example-resource",
+  "id": "500123",
+  "lastUpdatedTime": "example-value",
+  "creatorId": "500123",
+  "status": "ACTIVE",
+  "statusReason": "ACTIVE",
+  "repositories": "example-value"
+}

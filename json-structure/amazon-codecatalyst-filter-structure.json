@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-filter-structure.json",
+  "name": "Filter",
+  "description": "Information about a filter used to limit results of a query.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A key that can be used to sort results."
+        }
+      ]
+    },
+    "values": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringList"
+        },
+        {
+          "description": "The values of the key."
+        }
+      ]
+    },
+    "comparisonOperator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The operator used to compare the fields."
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "values"
+  ]
+}

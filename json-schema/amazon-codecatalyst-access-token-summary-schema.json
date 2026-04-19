@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-access-token-summary-schema.json",
+  "title": "AccessTokenSummary",
+  "description": "Information about a specified personal access token (PAT).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessTokenId"
+        },
+        {
+          "description": "The system-generated ID of the personal access token."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessTokenName"
+        },
+        {
+          "description": "The friendly name of the personal access token."
+        }
+      ]
+    },
+    "expiresTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The date and time when the personal access token will expire, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-get-dev-environment-response-schema.json",
+  "title": "GetDevEnvironmentResponse",
+  "description": "GetDevEnvironmentResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        {
+          "description": "The system-generated unique ID of the Dev Environment. "
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    },
+    "creatorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GetDevEnvironmentResponseCreatorIdString"
+        },
+        {
+          "description": "The system-generated unique ID of the user who created the Dev Environment. "
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentStatus"
+        },
+        {
+          "description": "The current status of the Dev Environment."
+        }
+      ]
+    },
+    "statusReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StatusReason"
+        },
+        {
+          "description": "The reason for the status."
+        }
+      ]
+    },
+    "repositories": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentRepositorySummaries"
+        },
+        {
+          "description": "The source repository that contains the branch cloned into the Dev Environment. "
+        }
+      ]
+    },
+    "alias": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GetDevEnvironmentResponseAliasString"
+        },
+        {
+          "description": "The user-specified alias for the Dev Environment. "
+        }
+      ]
+    },
+    "ides": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Ides"
+        },
+        {
+          "description": "Information about the integrated development environment (IDE) configured for the Dev Environment. "
+        }
+      ]
+    },
+    "instanceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InstanceType"
+        },
+        {
+          "description": "The Amazon EC2 instace type to use for the Dev Environment. "
+        }
+      ]
+    },
+    "inactivityTimeoutMinutes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InactivityTimeoutMinutes"
+        },
+        {
+          "description": "The amount of time the Dev Environment will run without any activity detected before stopping, in minutes."
+        }
+      ]
+    },
+    "persistentStorage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PersistentStorage"
+        },
+        {
+          "description": "Information about the amount of storage allocated to the Dev Environment. By default, a Dev Environment is configured to have 16GB of persistent storage."
+        }
+      ]
+    }
+  },
+  "required": [
+    "spaceName",
+    "projectName",
+    "id",
+    "lastUpdatedTime",
+    "creatorId",
+    "status",
+    "repositories",
+    "instanceType",
+    "inactivityTimeoutMinutes",
+    "persistentStorage"
+  ]
+}

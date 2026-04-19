@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-create-dev-environment-request-alias-string-structure.json",
+  "name": "CreateDevEnvironmentRequestAliasString",
+  "description": "CreateDevEnvironmentRequestAliasString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9]+(?:[-_\\.][a-zA-Z0-9]+)*",
+  "minLength": 1,
+  "maxLength": 128
+}

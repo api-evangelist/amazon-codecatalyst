@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-project-list-filter-structure.json",
+  "name": "ProjectListFilter",
+  "description": "nformation about the filter used to narrow the results returned in a list of projects.",
+  "type": "object",
+  "properties": {
+    "key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterKey"
+        },
+        {
+          "description": "A key that can be used to sort results."
+        }
+      ]
+    },
+    "values": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringList"
+        },
+        {
+          "description": "The values of the key."
+        }
+      ]
+    },
+    "comparisonOperator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComparisonOperator"
+        },
+        {
+          "description": "The operator used to compare the fields."
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "values"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-verify-session-response-structure.json",
+  "name": "VerifySessionResponse",
+  "description": "VerifySessionResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VerifySessionResponseIdentityString"
+        },
+        {
+          "description": "The system-generated unique ID of the user in Amazon CodeCatalyst."
+        }
+      ]
+    }
+  }
+}

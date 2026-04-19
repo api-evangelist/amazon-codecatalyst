@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-list-source-repository-branches-request-max-results-integer-structure.json",
+  "name": "ListSourceRepositoryBranchesRequestMaxResultsInteger",
+  "description": "ListSourceRepositoryBranchesRequestMaxResultsInteger schema from Amazon CodeCatalyst",
+  "type": "int32",
+  "minimum": 1,
+  "maximum": 50
+}

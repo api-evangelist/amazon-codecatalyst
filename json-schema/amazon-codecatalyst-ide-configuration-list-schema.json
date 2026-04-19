@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-ide-configuration-list-schema.json",
+  "title": "IdeConfigurationList",
+  "description": "IdeConfigurationList schema from Amazon CodeCatalyst",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/IdeConfiguration"
+  },
+  "minItems": 0,
+  "maxItems": 1
+}

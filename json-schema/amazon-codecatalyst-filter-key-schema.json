@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-filter-key-schema.json",
+  "title": "FilterKey",
+  "description": "FilterKey schema from Amazon CodeCatalyst",
+  "type": "string",
+  "enum": [
+    "hasAccessTo"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-dev-environment-summary-structure.json",
+  "name": "DevEnvironmentSummary",
+  "description": "Information about a Dev Environment. ",
+  "type": "object",
+  "properties": {
+    "spaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the space."
+        }
+      ]
+    },
+    "projectName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NameString"
+        },
+        {
+          "description": "The name of the project in the space."
+        }
+      ]
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        {
+          "description": "The system-generated unique ID for the Dev Environment. "
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntheticTimestamp_date_time"
+        },
+        {
+          "description": "The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\">RFC 3339</a>."
+        }
+      ]
+    },
+    "creatorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentSummaryCreatorIdString"
+        },
+        {
+          "description": "The system-generated unique ID of the user who created the Dev Environment. "
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentStatus"
+        },
+        {
+          "description": "The status of the Dev Environment. "
+        }
+      ]
+    },
+    "statusReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StatusReason"
+        },
+        {
+          "description": "The reason for the status."
+        }
+      ]
+    },
+    "repositories": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentRepositorySummaries"
+        },
+        {
+          "description": "Information about the repositories that will be cloned into the Dev Environment. If no rvalue is specified, no repository is cloned."
+        }
+      ]
+    },
+    "alias": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DevEnvironmentSummaryAliasString"
+        },
+        {
+          "description": "The user-specified alias for the Dev Environment."
+        }
+      ]
+    },
+    "ides": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Ides"
+        },
+        {
+          "description": "Information about the integrated development environment (IDE) configured for a Dev Environment."
+        }
+      ]
+    },
+    "instanceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InstanceType"
+        },
+        {
+          "description": "The Amazon EC2 instace type used for the Dev Environment. "
+        }
+      ]
+    },
+    "inactivityTimeoutMinutes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InactivityTimeoutMinutes"
+        },
+        {
+          "description": "The amount of time the Dev Environment will run without any activity detected before stopping, in minutes. Dev Environments consume compute minutes when running."
+        }
+      ]
+    },
+    "persistentStorage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PersistentStorage"
+        },
+        {
+          "description": "Information about the configuration of persistent storage for the Dev Environment."
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "lastUpdatedTime",
+    "creatorId",
+    "status",
+    "repositories",
+    "instanceType",
+    "inactivityTimeoutMinutes",
+    "persistentStorage"
+  ]
+}

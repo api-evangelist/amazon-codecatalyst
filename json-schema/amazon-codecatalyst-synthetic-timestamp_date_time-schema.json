@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-synthetic-timestamp_date_time-schema.json",
+  "title": "SyntheticTimestamp_date_time",
+  "description": "SyntheticTimestamp_date_time schema from Amazon CodeCatalyst",
+  "type": "string",
+  "format": "date-time"
+}

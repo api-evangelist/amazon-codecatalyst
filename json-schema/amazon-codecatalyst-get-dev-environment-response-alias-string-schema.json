@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-get-dev-environment-response-alias-string-schema.json",
+  "title": "GetDevEnvironmentResponseAliasString",
+  "description": "GetDevEnvironmentResponseAliasString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 0,
+  "maxLength": 128
+}

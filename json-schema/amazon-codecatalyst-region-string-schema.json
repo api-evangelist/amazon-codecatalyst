@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-region-string-schema.json",
+  "title": "RegionString",
+  "description": "RegionString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "pattern": "(us(?:-gov)?|af|ap|ca|cn|eu|sa)-(central|(?:north|south)?(?:east|west)?)-(\\d+)",
+  "minLength": 3,
+  "maxLength": 16
+}

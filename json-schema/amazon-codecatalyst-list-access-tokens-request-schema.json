@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-list-access-tokens-request-schema.json",
+  "title": "ListAccessTokensRequest",
+  "description": "ListAccessTokensRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "maxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListAccessTokensRequestMaxResultsInteger"
+        },
+        {
+          "description": "The maximum number of results to show in a single call to this API. If the number of results is larger than the number you specified, the response will include a <code>NextToken</code> element, which you can use to obtain additional results."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListAccessTokensRequestNextTokenString"
+        },
+        {
+          "description": "A token returned from a call to this API to indicate the next batch of results to return, if any."
+        }
+      ]
+    }
+  }
+}

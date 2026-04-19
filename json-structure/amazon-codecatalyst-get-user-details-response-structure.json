@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-get-user-details-response-structure.json",
+  "name": "GetUserDetailsResponse",
+  "description": "GetUserDetailsResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The system-generated unique ID of the user."
+        }
+      ]
+    },
+    "userName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the user as displayed in Amazon CodeCatalyst."
+        }
+      ]
+    },
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The friendly name displayed for the user in Amazon CodeCatalyst."
+        }
+      ]
+    },
+    "primaryEmail": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EmailAddress"
+        },
+        {
+          "description": "The email address provided by the user when they signed up."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  }
+}

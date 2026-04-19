@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-execute-command-session-configuration-command-string-schema.json",
+  "title": "ExecuteCommandSessionConfigurationCommandString",
+  "description": "ExecuteCommandSessionConfigurationCommandString schema from Amazon CodeCatalyst",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 255
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-delete-access-token-response-schema.json",
+  "title": "DeleteAccessTokenResponse",
+  "description": "DeleteAccessTokenResponse schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {}
+}

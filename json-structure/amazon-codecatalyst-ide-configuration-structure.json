@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-ide-configuration-structure.json",
+  "name": "IdeConfiguration",
+  "description": "Information about the configuration of an integrated development environment (IDE) for a Dev Environment.",
+  "type": "object",
+  "properties": {
+    "runtime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdeConfigurationRuntimeString"
+        },
+        {
+          "description": "<p>A link to the IDE runtime image. </p> <note> <p>This parameter is not required for <code>VSCode</code>.</p> </note>"
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdeConfigurationNameString"
+        },
+        {
+          "description": "The name of the IDE. Valid values include <code>Cloud9</code>, <code>IntelliJ</code>, <code>PyCharm</code>, <code>GoLand</code>, and <code>VSCode</code>."
+        }
+      ]
+    }
+  }
+}

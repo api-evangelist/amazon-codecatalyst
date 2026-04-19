@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-schema/amazon-codecatalyst-create-source-repository-branch-request-schema.json",
+  "title": "CreateSourceRepositoryBranchRequest",
+  "description": "CreateSourceRepositoryBranchRequest schema from Amazon CodeCatalyst",
+  "type": "object",
+  "properties": {
+    "headCommitId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The commit ID in an existing branch from which you want to create the new branch."
+        }
+      ]
+    }
+  }
+}

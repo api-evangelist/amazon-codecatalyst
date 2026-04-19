@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/json-structure/amazon-codecatalyst-instance-type-structure.json",
+  "name": "InstanceType",
+  "description": "InstanceType schema from Amazon CodeCatalyst",
+  "type": "string",
+  "enum": [
+    "dev.standard1.small",
+    "dev.standard1.medium",
+    "dev.standard1.large",
+    "dev.standard1.xlarge"
+  ]
+}
