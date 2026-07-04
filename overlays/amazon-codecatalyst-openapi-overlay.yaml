@@ -1,0 +1,28 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon CodeCatalyst
+  version: 1.0.0
+extends: openapi/amazon-codecatalyst-openapi-original.yaml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: amazon-codecatalyst
+      x-apievangelist-review: review.yml
+      x-apievangelist-lifecycle: closed-to-new-customers
+      x-apievangelist-lifecycle-note: >-
+        Amazon CodeCatalyst closed to new customers on 2025-11-07; existing
+        customers can continue using existing spaces but cannot create new ones,
+        and AWS does not plan new features.
+  - target: $.servers
+    update:
+      - url: https://codecatalyst.global.api.aws
+        description: Global CodeCatalyst API endpoint (HTTPS, SigV4-signed).
+  - target: $.info
+    update:
+      x-apievangelist-artifacts:
+        packages: packages/amazon-codecatalyst-packages.yml
+        errors: errors/amazon-codecatalyst-problem-types.yml
+        conformance: conformance/amazon-codecatalyst-conformance.yml
+        lifecycle: lifecycle/amazon-codecatalyst-lifecycle.yml
+        mcp: mcp/amazon-codecatalyst-mcp.yml
+        llms: llms/amazon-codecatalyst-llms.txt

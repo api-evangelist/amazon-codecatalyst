@@ -1,0 +1,34 @@
+generated: '2026-06-20'
+method: searched
+source: probed /.well-known/* on the API base host and AWS corporate host
+hosts:
+  - host: https://codecatalyst.global.api.aws
+    note: >-
+      SigV4-signed AWS API endpoint; all unsigned /.well-known/ requests return
+      HTTP 400 (no discovery surface served).
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+      - path: /.well-known/openid-configuration
+        status: 400
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+      - path: /.well-known/api-catalog
+        status: 400
+      - path: /.well-known/ai-plugin.json
+        status: 400
+  - host: https://aws.amazon.com
+    note: AWS-wide RFC 9116 security contact; applies to CodeCatalyst.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: amazon-codecatalyst-security.txt
+  - host: https://codecatalyst.aws
+    note: >-
+      Console single-page app returns HTTP 200 with an HTML shell for any path,
+      including /.well-known/*; no genuine discovery document is served.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        content_type: text/html
+        genuine: false

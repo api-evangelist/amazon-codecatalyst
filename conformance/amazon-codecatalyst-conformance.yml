@@ -1,0 +1,45 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/amazon-codecatalyst-openapi-original.yaml
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No OAuth2 security scheme. The single securityScheme is an apiKey named
+      "hmac" (Authorization header) representing AWS SigV4 signing.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect discovery or scheme present.
+  - id: aws-sigv4
+    conforms: true
+    evidence: >-
+      securitySchemes.hmac (type apiKey, Authorization header) plus
+      x-aws-signingName codecatalyst indicate AWS Signature Version 4 auth.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Error responses use AWS exception shapes (ThrottlingException,
+      ValidationException, etc.) as JSON, not application/problem+json.
+  - id: fhir-r4
+    conforms: false
+  - id: fapi
+    conforms: false
+  - id: scim2
+    conforms: false
+  - id: odata
+    conforms: false
+  - id: psd2
+    conforms: false
+  - id: json-api
+    conforms: false
+  - id: pagination
+    conforms: true
+    evidence: >-
+      List operations use nextToken / maxResults cursor pagination
+      (e.g. ListProjects, ListDevEnvironments, ListEventLogs).
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key header or client-token parameters observed.
+  - id: openapi-3
+    conforms: true
+    evidence: openapi field is 3.0.0.

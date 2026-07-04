@@ -1,0 +1,42 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/amazon-codecatalyst-openapi-original.yaml
+format: aws-exception
+note: >-
+  Derived from the OpenAPI error responses. This aws2openapi-converted spec maps
+  each AWS modeled exception to a synthetic HTTP status in the 480-485 range;
+  the "http_status" field below records the real HTTP status the CodeCatalyst
+  service returns at runtime. Bodies are AWS exception JSON (a "message" field),
+  not RFC 9457 application/problem+json.
+problems:
+  - name: ThrottlingException
+    spec_status: 480
+    http_status: 429
+    title: Request was denied due to request throttling.
+    remediation: Reduce request rate and retry with exponential backoff.
+  - name: ConflictException
+    spec_status: 481
+    http_status: 409
+    title: The request was denied because the requested action would cause a conflict with the current state of a resource.
+    remediation: Resolve the conflicting resource state and retry.
+  - name: ValidationException
+    spec_status: 482
+    http_status: 400
+    title: The request was denied because an input failed to satisfy the constraints specified by the service.
+    remediation: Correct the invalid input fields identified in the message and retry.
+  - name: ServiceQuotaExceededException
+    spec_status: 483
+    http_status: 402
+    title: The request was denied because one or more resources has reached its limits for the tier the space belongs to.
+    remediation: Request a quota increase or free up resources; consider a higher billing tier.
+  - name: ResourceNotFoundException
+    spec_status: 484
+    http_status: 404
+    title: The request was denied because the specified resource was not found.
+    remediation: Verify the space, project, or resource identifier exists and is accessible.
+  - name: AccessDeniedException
+    spec_status: 485
+    http_status: 403
+    title: The request was denied because you don't have sufficient access to perform this action.
+    remediation: Verify your CodeCatalyst permissions and PAT/session scope.
+applies_to_operations: all

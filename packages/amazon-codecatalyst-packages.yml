@@ -1,0 +1,66 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Amazon CodeCatalyst is accessed through the standard AWS SDKs and CLI; each
+  official SDK ships a dedicated CodeCatalyst client. Verified live against each
+  registry on 2026-06-20.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-codecatalyst"
+    url: https://www.npmjs.com/package/@aws-sdk/client-codecatalyst
+    install: npm install @aws-sdk/client-codecatalyst
+    version: 3.1079.0
+    official: true
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    note: AWS SDK for Python; exposes the boto3 codecatalyst client.
+    official: true
+  - language: python
+    registry: pypi
+    name: awscli
+    url: https://pypi.org/project/awscli/
+    install: pip install awscli
+    note: AWS CLI; provides the `aws codecatalyst` command group.
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/codecatalyst
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/codecatalyst
+    install: go get github.com/aws/aws-sdk-go-v2/service/codecatalyst
+    official: true
+  - language: dotnet
+    registry: nuget
+    name: AWSSDK.CodeCatalyst
+    url: https://www.nuget.org/packages/AWSSDK.CodeCatalyst
+    install: dotnet add package AWSSDK.CodeCatalyst
+    official: true
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-codecatalyst
+    url: https://rubygems.org/gems/aws-sdk-codecatalyst
+    install: gem install aws-sdk-codecatalyst
+    official: true
+  - language: java
+    registry: maven
+    name: software.amazon.awssdk:codecatalyst
+    url: https://central.sonatype.com/artifact/software.amazon.awssdk/codecatalyst
+    install: "implementation 'software.amazon.awssdk:codecatalyst'"
+    official: true
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    note: AWS SDK for PHP; includes the CodeCatalystClient.
+    official: true
+  - language: rust
+    registry: crates.io
+    name: aws-sdk-codecatalyst
+    url: https://crates.io/crates/aws-sdk-codecatalyst
+    install: cargo add aws-sdk-codecatalyst
+    version: 1.103.0
+    official: true

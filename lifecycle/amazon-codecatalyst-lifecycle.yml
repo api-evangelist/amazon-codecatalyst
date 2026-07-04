@@ -1,0 +1,26 @@
+generated: '2026-06-20'
+method: searched
+source: https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html
+status: closed-to-new-customers
+status_note: >-
+  AWS closed new customer access to Amazon CodeCatalyst effective 2025-11-07.
+  Existing customers can continue using existing spaces but cannot create new
+  spaces. AWS continues investing in security and availability but does not plan
+  to introduce new features. Recommended migration path: GitLab Duo with
+  Amazon Q, or self-service export/migration to GitHub/GitLab.
+versioning:
+  scheme: date-based
+  current: '2022-09-28'
+  docs: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+deprecation:
+  service_wind_down: true
+  closed_to_new_customers: '2025-11-07'
+  migration_guide: https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html
+  sunset_header: unknown
+sla:
+  url: https://aws.amazon.com/service-terms/
+  note: Governed by the AWS Service Terms; no published CodeCatalyst-specific uptime SLA found.
+status_page: https://health.aws.amazon.com/health/status
+health_report: https://docs.aws.amazon.com/codecatalyst/latest/userguide/health-dashboard.html
+quotas: https://docs.aws.amazon.com/codecatalyst/latest/userguide/quotas.html
+deprecated_operations: []
