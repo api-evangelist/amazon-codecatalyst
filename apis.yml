@@ -51,6 +51,14 @@ apis:
       - type: Conformance
         url: conformance/amazon-codecatalyst-conformance.yml
 common:
+  - type: TrustCenter
+    url: security/amazon-codecatalyst-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-codecatalyst-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-codecatalyst-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-codecatalyst-authentication.yml
   - type: GettingStarted
     url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/getting-started-overview.html
   - type: Authentication

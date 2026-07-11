@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/amazon-codecatalyst-openapi-original.yaml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: hmac
+  type: apiKey
+  in: header
+  parameter: Authorization
+  sources:
+  - openapi/amazon-codecatalyst-openapi-original.yaml
