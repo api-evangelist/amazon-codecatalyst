@@ -51,6 +51,8 @@ apis:
       - type: Conformance
         url: conformance/amazon-codecatalyst-conformance.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-codecatalyst-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-codecatalyst-trust-center.yml
   - type: VulnerabilityDisclosure
