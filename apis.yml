@@ -6,7 +6,19 @@ description: >-
   cloud-based development environments (Dev Environments). Teams can use CodeCatalyst to accelerate development
   velocity, standardize workflows, and integrate natively with AWS services and third-party tools.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-codecatalyst.png
 tags:
   - Amazon
   - AWS
@@ -21,36 +33,81 @@ created: '2026-03-16'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-  - aid: amazon-codecatalyst:amazon-codecatalyst-api
-    name: Amazon CodeCatalyst API
-    description: >-
-      The Amazon CodeCatalyst REST API provides programmatic access to spaces, projects, source repositories,
-      Dev Environments, workflows, workflow runs, and user management. Build integrations, automate project
-      workflows, and manage development environments programmatically.
-    humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-    baseURL: https://codecatalyst.global.api.aws
-    tags:
-      - Amazon
-      - AWS
-      - Developer Tools
-      - CI/CD
-      - Collaboration
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
-      - type: APIReference
-        url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-      - type: OpenAPI
-        url: openapi/amazon-codecatalyst-openapi-original.yaml
-      - type: Overlay
-        url: overlays/amazon-codecatalyst-openapi-overlay.yaml
-      - type: MCPServer
-        url: mcp/amazon-codecatalyst-mcp.yml
-      - type: ErrorCatalog
-        url: errors/amazon-codecatalyst-problem-types.yml
-      - type: Conformance
-        url: conformance/amazon-codecatalyst-conformance.yml
+- aid: amazon-codecatalyst:amazon-codecatalyst-accesstokens-api
+  name: Amazon CodeCatalyst AccessTokens API
+  description: The AccessTokens API from Amazon CodeCatalyst — 2 operation(s) for accesstokens.
+  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  baseURL: https://codecatalyst.global.api.aws
+  tags:
+  - AccessTokens
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-codecatalyst-accesstokens-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  - type: ErrorCatalog
+    url: errors/amazon-codecatalyst-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-codecatalyst-conformance.yml
+- aid: amazon-codecatalyst:amazon-codecatalyst-session-api
+  name: Amazon CodeCatalyst Session API
+  description: The Session API from Amazon CodeCatalyst — 1 operation(s) for session.
+  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  baseURL: https://codecatalyst.global.api.aws
+  tags:
+  - Session
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-codecatalyst-session-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  - type: ErrorCatalog
+    url: errors/amazon-codecatalyst-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-codecatalyst-conformance.yml
+- aid: amazon-codecatalyst:amazon-codecatalyst-spaces-api
+  name: Amazon CodeCatalyst Spaces API
+  description: The Spaces API from Amazon CodeCatalyst — 18 operation(s) for spaces.
+  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  baseURL: https://codecatalyst.global.api.aws
+  tags:
+  - Spaces
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-codecatalyst-spaces-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  - type: ErrorCatalog
+    url: errors/amazon-codecatalyst-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-codecatalyst-conformance.yml
+- aid: amazon-codecatalyst:amazon-codecatalyst-userdetails-api
+  name: Amazon CodeCatalyst UserDetails API
+  description: The UserDetails API from Amazon CodeCatalyst — 1 operation(s) for userdetails.
+  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  baseURL: https://codecatalyst.global.api.aws
+  tags:
+  - UserDetails
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-codecatalyst-userdetails-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+  - type: ErrorCatalog
+    url: errors/amazon-codecatalyst-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-codecatalyst-conformance.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-codecatalyst/overview
   - type: AgenticAccess
     url: agentic-access/amazon-codecatalyst-agentic-access.yml
   - type: TrustCenter
