@@ -1,0 +1,20 @@
+{
+  "provider": "amazon-codecatalyst",
+  "sources": [
+    "amazon-codecatalyst-accesstokens-api-openapi.yml",
+    "amazon-codecatalyst-session-api-openapi.yml",
+    "amazon-codecatalyst-spaces-api-openapi.yml",
+    "amazon-codecatalyst-userdetails-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-codecatalyst-accesstokens-api-openapi.yml",
+    "amazon-codecatalyst-session-api-openapi.yml",
+    "amazon-codecatalyst-spaces-api-openapi.yml",
+    "amazon-codecatalyst-userdetails-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

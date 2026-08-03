@@ -1,0 +1,458 @@
+{
+  "info": {
+    "_postman_id": "feb7aab7-e0c2-4673-bd62-2d484034859d",
+    "name": "Amazon CodeCatalyst AccessTokens UserDetails API",
+    "description": "<p>Welcome to the Amazon CodeCatalyst API reference. This reference provides descriptions of operations and data types for Amazon CodeCatalyst. You can use the Amazon CodeCatalyst API to work with the following objects. </p> <p>Spaces, by calling the following:</p> <ul> <li> <p> <a>DeleteSpace</a>, which deletes a space.</p> </li> <li> <p> <a>GetSpace</a>, which returns information about a space.</p> </li> <li> <p> <a>GetSubscription</a>, which returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.</p> </li> <li> <p> <a>ListSpaces</a>, which retrieves a list of spaces.</p> </li> <li> <p> <a>UpdateSpace</a>, which hanges one or more values for a space.</p> </li> </ul> <p>Projects, by calling the following:</p> <ul> <li> <p> <a>CreateProject</a> which creates a project in a specified space.</p> </li> <li> <p> <a>GetProject</a>, which returns information about a project.</p> </li> <li> <p> <a>ListProjects</a>, which retrieves a list of projects in a space.</p> </li> </ul> <p>Users, by calling the following:</p> <ul> <li> <p> <a>GetUserDetails</a>, which returns information about a user in Amazon CodeCatalyst.</p> </li> </ul> <p>Source repositories, by calling the following:</p> <ul> <li> <p> <a>CreateSourceRepository</a>, which creates an empty Git-based source repository in a specified project.</p> </li> <li> <p> <a>CreateSourceRepositoryBranch</a>, which creates a branch in a specified repository where you can work on code.</p> </li> <li> <p> <a>DeleteSourceRepository</a>, which deletes a source repository.</p> </li> <li> <p> <a>GetSourceRepository</a>, which returns information about a source repository.</p> </li> <li> <p> <a>GetSourceRepositoryCloneUrls</a>, which returns information about the URLs that can be used with a Git client to clone a source repository.</p> </li> <li> <p> <a>ListSourceRepositories</a>, which retrieves a list of source repositories in a project.</p> </li> <li> <p> <a>ListSourceRepositoryBranches</a>, which retrieves a list of branches in a source repository.</p> </li> </ul> <p>Dev Environments and the Amazon Web Services Toolkits, by calling the following:</p> <ul> <li> <p> <a>CreateDevEnvironment</a>, which creates a Dev Environment, where you can quickly work on the code stored in the source repositories of your project.</p> </li> <li> <p> <a>DeleteDevEnvironment</a>, which deletes a Dev Environment.</p> </li> <li> <p> <a>GetDevEnvironment</a>, which returns information about a Dev Environment.</p> </li> <li> <p> <a>ListDevEnvironments</a>, which retrieves a list of Dev Environments in a project.</p> </li> <li> <p> <a>ListDevEnvironmentSessions</a>, which retrieves a list of active Dev Environment sessions in a project.</p> </li> <li> <p> <a>StartDevEnvironment</a>, which starts a specified Dev Environment and puts it into an active state.</p> </li> <li> <p> <a>StartDevEnvironmentSession</a>, which starts a session to a specified Dev Environment.</p> </li> <li> <p> <a>StopDevEnvironment</a>, which stops a specified Dev Environment and puts it into an stopped state.</p> </li> <li> <p> <a>StopDevEnvironmentSession</a>, which stops a session for a specified Dev Environment.</p> </li> <li> <p> <a>UpdateDevEnvironment</a>, which changes one or more values for a Dev Environment.</p> </li> </ul> <p>Security, activity, and resource management in Amazon CodeCatalyst, by calling the following:</p> <ul> <li> <p> <a>CreateAccessToken</a>, which creates a personal access token (PAT) for the current user.</p> </li> <li> <p> <a>DeleteAccessToken</a>, which deletes a specified personal access token (PAT).</p> </li> <li> <p> <a>ListAccessTokens</a>, which lists all personal access tokens (PATs) associated with a user.</p> </li> <li> <p> <a>ListEventLogs</a>, which retrieves a list of events that occurred during a specified time period in a space.</p> </li> <li> <p> <a>VerifySession</a>, which verifies whether the calling user has a valid Amazon CodeCatalyst login and session.</p> </li> </ul> <note> <p>If you are using the Amazon CodeCatalyst APIs with an SDK or the CLI, you must configure your computer to work with Amazon CodeCatalyst and single sign-on (SSO). For more information, see <a href=\"https://docs.aws.amazon.com/codecatalyst/latest/userguide/set-up-cli.html\">Setting up to use the CLI with Amazon CodeCatalyst</a> and the SSO documentation for your SDK.</p> </note>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:09:25.000Z",
+    "updatedAt": "2026-07-28T10:09:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-feb7aab7-e0c2-4673-bd62-2d484034859d"
+  },
+  "item": [
+    {
+      "name": "userDetails",
+      "item": [
+        {
+          "name": "Amazon CodeCatalyst Get User Details",
+          "id": "408362c5-afa8-423e-b2d2-4ad45f80f1e8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "userDetails"
+              ],
+              "query": [
+                {
+                  "description": "The system-generated unique ID of the user. ",
+                  "key": "id",
+                  "value": "<string>"
+                },
+                {
+                  "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                  "key": "userName",
+                  "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                }
+              ]
+            },
+            "description": "Returns information about a user. "
+          },
+          "response": [
+            {
+              "id": "fb64eebc-be60-4e69-9d73-3874ab479628",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"userId\": \"<string>\",\n  \"userName\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"primaryEmail\": {\n    \"email\": \"<string>\",\n    \"verified\": \"<boolean>\"\n  },\n  \"version\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-fb64eebc-be60-4e69-9d73-3874ab479628"
+            },
+            {
+              "id": "0b27a924-e589-4252-84dc-692a468420f7",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-0b27a924-e589-4252-84dc-692a468420f7"
+            },
+            {
+              "id": "0d9792f9-de82-4294-a58a-5d98d2996c6d",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-0d9792f9-de82-4294-a58a-5d98d2996c6d"
+            },
+            {
+              "id": "6281cd8c-f751-4617-a89a-b229190c0e61",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-6281cd8c-f751-4617-a89a-b229190c0e61"
+            },
+            {
+              "id": "82173cc1-832e-4369-8bcd-acad0ce9b897",
+              "name": "ServiceQuotaExceededException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-82173cc1-832e-4369-8bcd-acad0ce9b897"
+            },
+            {
+              "id": "20d565d2-58c3-42c4-a519-57b8f8f85aef",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-20d565d2-58c3-42c4-a519-57b8f8f85aef"
+            },
+            {
+              "id": "7b9bf5b6-f2b1-4b67-bdf7-c855b04efe1d",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userDetails?id=<string>&userName=h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userDetails"
+                  ],
+                  "query": [
+                    {
+                      "description": "The system-generated unique ID of the user. ",
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The name of the user as displayed in Amazon CodeCatalyst.",
+                      "key": "userName",
+                      "value": "h66xkkoqDg6shyle58wf1JrltmpUVsZJL6Z0esmJLtGyRu8WEwgWRAy83qi3d"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:09:26.000Z",
+              "updatedAt": "2026-07-28T10:09:26.000Z",
+              "uid": "35240-7b9bf5b6-f2b1-4b67-bdf7-c855b04efe1d"
+            }
+          ],
+          "createdAt": "2026-07-28T10:09:26.000Z",
+          "updatedAt": "2026-07-28T10:09:26.000Z",
+          "uid": "35240-408362c5-afa8-423e-b2d2-4ad45f80f1e8"
+        }
+      ],
+      "id": "112cedff-adbe-485b-8c51-fbebbb0fa24d",
+      "createdAt": "2026-07-28T10:09:26.000Z",
+      "updatedAt": "2026-07-28T10:09:26.000Z",
+      "uid": "35240-112cedff-adbe-485b-8c51-fbebbb0fa24d"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://codecatalyst.global.api.aws"
+    }
+  ]
+}
