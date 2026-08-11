@@ -106,6 +106,10 @@ apis:
   - type: Conformance
     url: conformance/amazon-codecatalyst-conformance.yml
 common:
+  - type: MCPServer
+    url: mcp/amazon-codecatalyst-mcp.yml
+  - type: Overlay
+    url: overlays/amazon-codecatalyst-openapi-overlay.yaml
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-codecatalyst/overview
   - type: AgenticAccess
