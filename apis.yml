@@ -15,7 +15,7 @@ accessModel:
   label: Self-serve signup
   confidence: medium
   source:
-  - authentication
+    - authentication
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-codecatalyst.png
@@ -27,84 +27,83 @@ tags:
   - Collaboration
   - DevOps
   - Source Control
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/apis.yml
 created: '2026-03-16'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-codecatalyst:amazon-codecatalyst-accesstokens-api
-  name: Amazon CodeCatalyst AccessTokens API
-  description: The AccessTokens API from Amazon CodeCatalyst — 2 operation(s) for accesstokens.
-  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  baseURL: https://codecatalyst.global.api.aws
-  tags:
-  - AccessTokens
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-codecatalyst-accesstokens-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  - type: ErrorCatalog
-    url: errors/amazon-codecatalyst-problem-types.yml
-  - type: Conformance
-    url: conformance/amazon-codecatalyst-conformance.yml
-- aid: amazon-codecatalyst:amazon-codecatalyst-session-api
-  name: Amazon CodeCatalyst Session API
-  description: The Session API from Amazon CodeCatalyst — 1 operation(s) for session.
-  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  baseURL: https://codecatalyst.global.api.aws
-  tags:
-  - Session
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-codecatalyst-session-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  - type: ErrorCatalog
-    url: errors/amazon-codecatalyst-problem-types.yml
-  - type: Conformance
-    url: conformance/amazon-codecatalyst-conformance.yml
-- aid: amazon-codecatalyst:amazon-codecatalyst-spaces-api
-  name: Amazon CodeCatalyst Spaces API
-  description: The Spaces API from Amazon CodeCatalyst — 18 operation(s) for spaces.
-  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  baseURL: https://codecatalyst.global.api.aws
-  tags:
-  - Spaces
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-codecatalyst-spaces-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  - type: ErrorCatalog
-    url: errors/amazon-codecatalyst-problem-types.yml
-  - type: Conformance
-    url: conformance/amazon-codecatalyst-conformance.yml
-- aid: amazon-codecatalyst:amazon-codecatalyst-userdetails-api
-  name: Amazon CodeCatalyst UserDetails API
-  description: The UserDetails API from Amazon CodeCatalyst — 1 operation(s) for userdetails.
-  humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  baseURL: https://codecatalyst.global.api.aws
-  tags:
-  - UserDetails
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-codecatalyst-userdetails-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
-  - type: ErrorCatalog
-    url: errors/amazon-codecatalyst-problem-types.yml
-  - type: Conformance
-    url: conformance/amazon-codecatalyst-conformance.yml
+  - aid: amazon-codecatalyst:amazon-codecatalyst-accesstokens-api
+    name: Amazon CodeCatalyst AccessTokens API
+    description: The AccessTokens API from Amazon CodeCatalyst — 2 operation(s) for accesstokens.
+    humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+    baseURL: https://codecatalyst.global.api.aws
+    tags:
+      - AccessTokens
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-codecatalyst-accesstokens-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+      - type: ErrorCatalog
+        url: errors/amazon-codecatalyst-problem-types.yml
+      - type: Conformance
+        url: conformance/amazon-codecatalyst-conformance.yml
+  - aid: amazon-codecatalyst:amazon-codecatalyst-session-api
+    name: Amazon CodeCatalyst Session API
+    description: The Session API from Amazon CodeCatalyst — 1 operation(s) for session.
+    humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+    baseURL: https://codecatalyst.global.api.aws
+    tags:
+      - Session
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-codecatalyst-session-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+      - type: ErrorCatalog
+        url: errors/amazon-codecatalyst-problem-types.yml
+      - type: Conformance
+        url: conformance/amazon-codecatalyst-conformance.yml
+  - aid: amazon-codecatalyst:amazon-codecatalyst-spaces-api
+    name: Amazon CodeCatalyst Spaces API
+    description: The Spaces API from Amazon CodeCatalyst — 18 operation(s) for spaces.
+    humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+    baseURL: https://codecatalyst.global.api.aws
+    tags:
+      - Spaces
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-codecatalyst-spaces-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+      - type: ErrorCatalog
+        url: errors/amazon-codecatalyst-problem-types.yml
+      - type: Conformance
+        url: conformance/amazon-codecatalyst-conformance.yml
+  - aid: amazon-codecatalyst:amazon-codecatalyst-userdetails-api
+    name: Amazon CodeCatalyst UserDetails API
+    description: The UserDetails API from Amazon CodeCatalyst — 1 operation(s) for userdetails.
+    humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+    baseURL: https://codecatalyst.global.api.aws
+    tags:
+      - UserDetails
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-codecatalyst-userdetails-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/codecatalyst/latest/userguide/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
+      - type: ErrorCatalog
+        url: errors/amazon-codecatalyst-problem-types.yml
+      - type: Conformance
+        url: conformance/amazon-codecatalyst-conformance.yml
 common:
   - type: MCPServer
     url: mcp/amazon-codecatalyst-mcp.yml
@@ -152,8 +151,6 @@ common:
     url: rules/amazon-codecatalyst-spectral-rules.yml
   - type: Vocabulary
     url: vocabulary/amazon-codecatalyst-vocabulary.yaml
-  - type: NaftikoCapability
-    url: capabilities/amazon-codecatalyst-developer-collaboration.yaml
   - type: JSONLD
     url: json-ld/amazon-codecatalyst-context.jsonld
   - type: Packages
@@ -174,38 +171,38 @@ common:
           onboarding and eliminating local setup friction.
       - name: Source Repositories
         description: >-
-          Built-in Git repositories for hosting and managing source code with branching, pull requests, and code
-          review capabilities.
+          Built-in Git repositories for hosting and managing source code with branching, pull requests, and code review
+          capabilities.
       - name: CI/CD Workflows
         description: >-
-          Visual workflow builder for creating automated build, test, and deployment pipelines with native AWS
-          service integrations.
+          Visual workflow builder for creating automated build, test, and deployment pipelines with native AWS service
+          integrations.
       - name: Project Management
         description: >-
           Integrated issue tracking and project boards for organizing work, tracking bugs, and managing feature
           development alongside code.
       - name: Spaces
         description: >-
-          Organizational units for grouping projects and managing team membership, billing, and resource access
-          across an organization.
+          Organizational units for grouping projects and managing team membership, billing, and resource access across
+          an organization.
       - name: Third-Party Integrations
         description: >-
-          Connect to GitHub repositories, Jira, Slack, and other third-party tools to incorporate CodeCatalyst
-          into existing development workflows.
+          Connect to GitHub repositories, Jira, Slack, and other third-party tools to incorporate CodeCatalyst into
+          existing development workflows.
   - type: UseCases
     data:
       - name: Rapid Developer Onboarding
         description: >-
-          Use Dev Environments to eliminate local development setup time, allowing new developers to be
-          productive within minutes on any project.
+          Use Dev Environments to eliminate local development setup time, allowing new developers to be productive
+          within minutes on any project.
       - name: Standardized CI/CD Pipelines
         description: >-
-          Create and enforce consistent build, test, and deployment workflows across all projects in a space,
-          reducing inconsistency and manual pipeline maintenance.
+          Create and enforce consistent build, test, and deployment workflows across all projects in a space, reducing
+          inconsistency and manual pipeline maintenance.
       - name: Collaborative Code Development
         description: >-
-          Enable distributed teams to collaborate on source code through integrated repositories, pull requests,
-          and code review workflows.
+          Enable distributed teams to collaborate on source code through integrated repositories, pull requests, and
+          code review workflows.
   - type: Integrations
     data:
       - name: GitHub
