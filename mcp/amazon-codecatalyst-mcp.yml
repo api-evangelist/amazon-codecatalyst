@@ -2,111 +2,115 @@ generated: '2026-06-20'
 method: derived
 status: candidate
 source: openapi/amazon-codecatalyst-openapi-original.yaml
-note: >-
-  No first-party Amazon CodeCatalyst MCP server was found. AWS Labs publishes
-  general MCP servers (AWS Documentation, AWS API) at github.com/awslabs/mcp but
-  none dedicated to CodeCatalyst. The tool list below is a candidate derived
-  one-to-one from the OpenAPI operationIds and is not an official server.
+note: No first-party Amazon CodeCatalyst MCP server was found. AWS Labs publishes general MCP servers
+  (AWS Documentation, AWS API) at github.com/awslabs/mcp but none dedicated to CodeCatalyst. The tool
+  list below is a candidate derived one-to-one from the OpenAPI operationIds and is not an official server.
 server:
   name: amazon-codecatalyst
   transport: stdio
 tools:
-  - name: create_access_token
-    description: Creates a personal access token (PAT) for the current user.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateAccessToken
-  - name: list_access_tokens
-    description: Lists all personal access tokens (PATs) associated with the user.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListAccessTokens
-  - name: delete_access_token
-    description: Deletes a specified personal access token (PAT).
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteAccessToken
-  - name: create_dev_environment
-    description: Creates a Dev Environment in a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateDevEnvironment
-  - name: get_dev_environment
-    description: Returns information about a Dev Environment.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetDevEnvironment
-  - name: list_dev_environments
-    description: Retrieves a list of Dev Environments in a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListDevEnvironments
-  - name: update_dev_environment
-    description: Changes one or more values for a Dev Environment.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateDevEnvironment
-  - name: delete_dev_environment
-    description: Deletes a Dev Environment.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteDevEnvironment
-  - name: start_dev_environment
-    description: Starts a specified Dev Environment and puts it into an active state.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StartDevEnvironment
-  - name: stop_dev_environment
-    description: Stops a specified Dev Environment and puts it into a stopped state.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StopDevEnvironment
-  - name: start_dev_environment_session
-    description: Starts a session for a specified Dev Environment.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StartDevEnvironmentSession
-  - name: stop_dev_environment_session
-    description: Stops a session for a specified Dev Environment.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StopDevEnvironmentSession
-  - name: list_dev_environment_sessions
-    description: Retrieves a list of active Dev Environment sessions in a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListDevEnvironmentSessions
-  - name: create_project
-    description: Creates a project in a specified space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateProject
-  - name: get_project
-    description: Returns information about a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetProject
-  - name: list_projects
-    description: Retrieves a list of projects in a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListProjects
-  - name: update_project
-    description: Changes one or more values for a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateProject
-  - name: delete_project
-    description: Deletes a project in a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteProject
-  - name: create_source_repository
-    description: Creates an empty Git-based source repository in a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateSourceRepository
-  - name: get_source_repository
-    description: Returns information about a source repository.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSourceRepository
-  - name: list_source_repositories
-    description: Retrieves a list of source repositories in a project.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSourceRepositories
-  - name: delete_source_repository
-    description: Deletes a source repository.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteSourceRepository
-  - name: get_source_repository_clone_urls
-    description: Returns URLs that can be used with a Git client to clone a source repository.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSourceRepositoryCloneUrls
-  - name: create_source_repository_branch
-    description: Creates a branch in a specified source repository.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateSourceRepositoryBranch
-  - name: list_source_repository_branches
-    description: Retrieves a list of branches in a source repository.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSourceRepositoryBranches
-  - name: get_space
-    description: Returns information about a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSpace
-  - name: list_spaces
-    description: Retrieves a list of spaces.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSpaces
-  - name: update_space
-    description: Changes one or more values for a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateSpace
-  - name: delete_space
-    description: Deletes a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteSpace
-  - name: get_subscription
-    description: Returns billing account and plan information for a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSubscription
-  - name: get_user_details
-    description: Returns information about a user.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetUserDetails
-  - name: list_event_logs
-    description: Retrieves events that occurred during a specified time period in a space.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListEventLogs
-  - name: verify_session
-    description: Verifies whether the calling user has a valid CodeCatalyst login and session.
-    source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#VerifySession
+- name: create_access_token
+  description: Creates a personal access token (PAT) for the current user.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateAccessToken
+- name: list_access_tokens
+  description: Lists all personal access tokens (PATs) associated with the user.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListAccessTokens
+- name: delete_access_token
+  description: Deletes a specified personal access token (PAT).
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteAccessToken
+- name: create_dev_environment
+  description: Creates a Dev Environment in a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateDevEnvironment
+- name: get_dev_environment
+  description: Returns information about a Dev Environment.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetDevEnvironment
+- name: list_dev_environments
+  description: Retrieves a list of Dev Environments in a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListDevEnvironments
+- name: update_dev_environment
+  description: Changes one or more values for a Dev Environment.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateDevEnvironment
+- name: delete_dev_environment
+  description: Deletes a Dev Environment.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteDevEnvironment
+- name: start_dev_environment
+  description: Starts a specified Dev Environment and puts it into an active state.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StartDevEnvironment
+- name: stop_dev_environment
+  description: Stops a specified Dev Environment and puts it into a stopped state.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StopDevEnvironment
+- name: start_dev_environment_session
+  description: Starts a session for a specified Dev Environment.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StartDevEnvironmentSession
+- name: stop_dev_environment_session
+  description: Stops a session for a specified Dev Environment.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#StopDevEnvironmentSession
+- name: list_dev_environment_sessions
+  description: Retrieves a list of active Dev Environment sessions in a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListDevEnvironmentSessions
+- name: create_project
+  description: Creates a project in a specified space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateProject
+- name: get_project
+  description: Returns information about a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetProject
+- name: list_projects
+  description: Retrieves a list of projects in a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListProjects
+- name: update_project
+  description: Changes one or more values for a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateProject
+- name: delete_project
+  description: Deletes a project in a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteProject
+- name: create_source_repository
+  description: Creates an empty Git-based source repository in a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateSourceRepository
+- name: get_source_repository
+  description: Returns information about a source repository.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSourceRepository
+- name: list_source_repositories
+  description: Retrieves a list of source repositories in a project.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSourceRepositories
+- name: delete_source_repository
+  description: Deletes a source repository.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteSourceRepository
+- name: get_source_repository_clone_urls
+  description: Returns URLs that can be used with a Git client to clone a source repository.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSourceRepositoryCloneUrls
+- name: create_source_repository_branch
+  description: Creates a branch in a specified source repository.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#CreateSourceRepositoryBranch
+- name: list_source_repository_branches
+  description: Retrieves a list of branches in a source repository.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSourceRepositoryBranches
+- name: get_space
+  description: Returns information about a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSpace
+- name: list_spaces
+  description: Retrieves a list of spaces.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListSpaces
+- name: update_space
+  description: Changes one or more values for a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#UpdateSpace
+- name: delete_space
+  description: Deletes a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#DeleteSpace
+- name: get_subscription
+  description: Returns billing account and plan information for a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetSubscription
+- name: get_user_details
+  description: Returns information about a user.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#GetUserDetails
+- name: list_event_logs
+  description: Retrieves events that occurred during a specified time period in a space.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#ListEventLogs
+- name: verify_session
+  description: Verifies whether the calling user has a valid CodeCatalyst login and session.
+  source_operation: openapi/amazon-codecatalyst-openapi-original.yaml#VerifySession
+deployment:
+  mode: none
+  verified: derived
+  tools: 33
+  checked: '2026-08-12'
+  source: catalog MCP census

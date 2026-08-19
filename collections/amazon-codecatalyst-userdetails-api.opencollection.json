@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon CodeCatalyst AccessTokens UserDetails API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UserDetails",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon CodeCatalyst Get User Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://codecatalyst.global.api.aws/userDetails",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "The system-generated unique ID of the user. "
+              },
+              {
+                "name": "userName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the user as displayed in Amazon CodeCatalyst."
+              }
+            ]
+          },
+          "docs": "Returns information about a user. "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
