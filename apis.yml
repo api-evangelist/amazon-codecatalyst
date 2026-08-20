@@ -38,6 +38,8 @@ apis:
     humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
     baseURL: https://codecatalyst.global.api.aws
     tags:
+      - Access Tokens
+    tags_raw:
       - AccessTokens
     properties:
       - type: OpenAPI
@@ -92,6 +94,8 @@ apis:
     humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
     baseURL: https://codecatalyst.global.api.aws
     tags:
+      - User Details
+    tags_raw:
       - UserDetails
     properties:
       - type: OpenAPI
