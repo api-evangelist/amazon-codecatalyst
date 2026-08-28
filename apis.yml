@@ -6,6 +6,18 @@ description: >-
   cloud-based development environments (Dev Environments). Teams can use CodeCatalyst to accelerate development
   velocity, standardize workflows, and integrate natively with AWS services and third-party tools.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
