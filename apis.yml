@@ -50,7 +50,7 @@ apis:
     humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
     baseURL: https://codecatalyst.global.api.aws
     tags:
-      - Access Tokens
+      - AccessTokens
     tags_raw:
       - AccessTokens
     properties:
@@ -106,7 +106,7 @@ apis:
     humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
     baseURL: https://codecatalyst.global.api.aws
     tags:
-      - User Details
+      - UserDetails
     tags_raw:
       - UserDetails
     properties:
