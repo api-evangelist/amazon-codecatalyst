@@ -51,6 +51,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
   baseURL: https://codecatalyst.global.api.aws
   tags:
+  - Sessions
+  tags_raw:
   - Session
   properties:
   - type: OpenAPI
@@ -69,6 +71,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
   baseURL: https://codecatalyst.global.api.aws
   tags:
+  - Space
+  tags_raw:
   - Spaces
   properties:
   - type: OpenAPI
