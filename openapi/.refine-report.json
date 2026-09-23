@@ -1,10 +1,7 @@
 {
   "provider": "amazon-codecatalyst",
   "sources": [
-    "amazon-codecatalyst-accesstokens-api-openapi.yml",
-    "amazon-codecatalyst-session-api-openapi.yml",
-    "amazon-codecatalyst-spaces-api-openapi.yml",
-    "amazon-codecatalyst-userdetails-api-openapi.yml"
+    "_original/amazon-codecatalyst-openapi-original.yaml"
   ],
   "outputs": [
     "amazon-codecatalyst-accesstokens-api-openapi.yml",
@@ -12,11 +9,58 @@
     "amazon-codecatalyst-spaces-api-openapi.yml",
     "amazon-codecatalyst-userdetails-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 2 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-codecatalyst-openapi-original.yaml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/accessTokens -> AccessTokens",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/accessTokens -> AccessTokens",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/projects -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/accessTokens/{id} -> AccessTokens",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PATCH /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/spaces/{spaceName}/projects/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{spaceName}/projects/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PATCH /v1/spaces/{spaceName}/projects/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/spaces/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PATCH /v1/spaces/{name} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/cloneUrls -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /v1/spaces/{spaceName}/subscription -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /userDetails -> UserDetails",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{devEnvironmentId}/sessions -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/eventLogs -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths POST /v1/spaces -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/start -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths PUT /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/stop -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths DELETE /v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session/{sessionId} -> Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: tagged paths GET /session -> Session",
+    "amazon-codecatalyst-openapi-original.yaml: declared missing tag: AccessTokens",
+    "amazon-codecatalyst-openapi-original.yaml: declared missing tag: Session",
+    "amazon-codecatalyst-openapi-original.yaml: declared missing tag: Spaces",
+    "amazon-codecatalyst-openapi-original.yaml: declared missing tag: UserDetails",
+    "superseded outputs removed: amazon-codecatalyst-access-tokens-api-openapi.yml, amazon-codecatalyst-user-details-api-openapi.yml",
+    "apis.yml register: written (+2 apis, 4 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-codecatalyst-access-tokens-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-codecatalyst-session-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-codecatalyst-spaces-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-codecatalyst-user-details-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
