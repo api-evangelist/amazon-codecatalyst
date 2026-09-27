@@ -174,27 +174,6 @@ paths:
       - User Details
 components:
   schemas:
-    AccessDeniedException: {}
-    Boolean:
-      type: boolean
-    EmailAddress:
-      type: object
-      properties:
-        email:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The email address.
-        verified:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Whether the email address has been verified.
-      description: Information about an email address.
-    ServiceQuotaExceededException: {}
-    ConflictException: {}
-    String:
-      type: string
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
     GetUserDetailsResponse:
       type: object
       properties:
@@ -218,7 +197,28 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: <p/>
+    EmailAddress:
+      type: object
+      properties:
+        email:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The email address.
+        verified:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Whether the email address has been verified.
+      description: Information about an email address.
+    Boolean:
+      type: boolean
+    AccessDeniedException: {}
+    ConflictException: {}
     ValidationException: {}
+    ServiceQuotaExceededException: {}
+    ResourceNotFoundException: {}
+    String:
+      type: string
+    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

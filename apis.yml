@@ -71,9 +71,11 @@ apis:
   humanURL: https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html
   baseURL: https://codecatalyst.global.api.aws
   tags:
+  - Spaces
   - Space
   tags_raw:
   - Spaces
+  - Space
   properties:
   - type: OpenAPI
     url: openapi/amazon-codecatalyst-spaces-api-openapi.yml
@@ -123,7 +125,7 @@ apis:
     url: conformance/amazon-codecatalyst-conformance.yml
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/codecatalyst/
 - type: X-MCPServerCandidate
   url: mcp/amazon-codecatalyst-mcp.yml
   note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate
@@ -236,5 +238,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product

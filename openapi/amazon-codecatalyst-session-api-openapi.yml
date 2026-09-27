@@ -153,14 +153,11 @@ paths:
 components:
   schemas:
     AccessDeniedException: {}
-    ServiceQuotaExceededException: {}
     ConflictException: {}
     VerifySessionResponseIdentityString:
       type: string
       minLength: 1
       maxLength: 256
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
     VerifySessionResponse:
       type: object
       properties:
@@ -169,6 +166,9 @@ components:
           - $ref: '#/components/schemas/VerifySessionResponseIdentityString'
           - description: The system-generated unique ID of the user in Amazon CodeCatalyst.
     ValidationException: {}
+    ServiceQuotaExceededException: {}
+    ResourceNotFoundException: {}
+    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

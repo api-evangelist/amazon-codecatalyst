@@ -403,64 +403,10 @@ paths:
       - Access Tokens
 components:
   schemas:
-    ListAccessTokensResponse:
-      type: object
-      required:
-      - items
-      properties:
-        items:
-          allOf:
-          - $ref: '#/components/schemas/AccessTokenSummaries'
-          - description: A list of personal access tokens (PATs) associated with the calling user identity.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-    AccessTokenSecret:
-      type: string
-      minLength: 1
-      maxLength: 4000
-      format: password
-    AccessDeniedException: {}
-    SyntheticTimestamp_date_time:
-      type: string
-      format: date-time
-    AccessTokenName:
-      type: string
-      minLength: 1
-      maxLength: 100
-    ServiceQuotaExceededException: {}
-    DeleteAccessTokenResponse:
-      type: object
-      properties: {}
-    AccessTokenId:
-      type: string
-      minLength: 1
-      maxLength: 36
-    ConflictException: {}
-    String:
-      type: string
-    ThrottlingException: {}
-    AccessTokenSummary:
-      type: object
-      required:
-      - id
-      - name
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/AccessTokenId'
-          - description: The system-generated ID of the personal access token.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/AccessTokenName'
-          - description: The friendly name of the personal access token.
-        expiresTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The date and time when the personal access token will expire, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-      description: Information about a specified personal access token (PAT).
-    ResourceNotFoundException: {}
+    AccessTokenSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccessTokenSummary'
     CreateAccessTokenResponse:
       type: object
       required:
@@ -485,11 +431,65 @@ components:
           allOf:
           - $ref: '#/components/schemas/AccessTokenId'
           - description: The system-generated unique ID of the access token.
-    AccessTokenSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccessTokenSummary'
+    AccessTokenSummary:
+      type: object
+      required:
+      - id
+      - name
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/AccessTokenId'
+          - description: The system-generated ID of the personal access token.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/AccessTokenName'
+          - description: The friendly name of the personal access token.
+        expiresTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The date and time when the personal access token will expire, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+      description: Information about a specified personal access token (PAT).
+    AccessTokenSecret:
+      type: string
+      minLength: 1
+      maxLength: 4000
+      format: password
+    AccessDeniedException: {}
+    AccessTokenName:
+      type: string
+      minLength: 1
+      maxLength: 100
+    ConflictException: {}
     ValidationException: {}
+    SyntheticTimestamp_date_time:
+      type: string
+      format: date-time
+    ListAccessTokensResponse:
+      type: object
+      required:
+      - items
+      properties:
+        items:
+          allOf:
+          - $ref: '#/components/schemas/AccessTokenSummaries'
+          - description: A list of personal access tokens (PATs) associated with the calling user identity.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+    ResourceNotFoundException: {}
+    String:
+      type: string
+    ServiceQuotaExceededException: {}
+    AccessTokenId:
+      type: string
+      minLength: 1
+      maxLength: 36
+    DeleteAccessTokenResponse:
+      type: object
+      properties: {}
+    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey
