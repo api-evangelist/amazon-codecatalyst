@@ -1,0 +1,25 @@
+slug: amazon-codecatalyst
+provider: Amazon CodeCatalyst
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Spaces
+  spec_file: amazon-codecatalyst-spaces-api-openapi.yml
+  capability_id: BC-4200.40
+  capability_id_l1: BC-4200
+  capability_name: Software Construction Management
+  confidence: 0.7
+  evidence: '''CreateSourceRepository'', ''CreateSourceRepositoryBranch'', ''CreateDevEnvironment'', ''CreateProject'''
+  reason: Operations create and manage source repositories, branches and cloud dev environments for software
+    projects — source-control-centred software construction practice. Some overlap with non-production
+    Environment Management, hence moderate confidence.

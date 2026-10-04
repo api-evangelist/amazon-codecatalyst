@@ -124,6 +124,9 @@ apis:
   - type: Conformance
     url: conformance/amazon-codecatalyst-conformance.yml
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-codecatalyst-capability-edges.yml
+  name: Amazon CodeCatalyst Business Capability Map
 - type: Website
   url: https://aws.amazon.com/codecatalyst/
 - type: X-MCPServerCandidate
