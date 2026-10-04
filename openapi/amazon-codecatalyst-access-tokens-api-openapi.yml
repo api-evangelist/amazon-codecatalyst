@@ -403,9 +403,38 @@ paths:
       - Access Tokens
 components:
   schemas:
-    DeleteAccessTokenResponse:
+    AccessTokenSecret:
+      type: string
+      minLength: 1
+      maxLength: 4000
+      format: password
+    AccessTokenSummary:
       type: object
-      properties: {}
+      required:
+      - id
+      - name
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/AccessTokenId'
+          - description: The system-generated ID of the personal access token.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/AccessTokenName'
+          - description: The friendly name of the personal access token.
+        expiresTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The date and time when the personal access token will expire, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+      description: Information about a specified personal access token (PAT).
+    ResourceNotFoundException: {}
+    SyntheticTimestamp_date_time:
+      type: string
+      format: date-time
+    ValidationException: {}
+    String:
+      type: string
+    AccessDeniedException: {}
     ListAccessTokensResponse:
       type: object
       required:
@@ -419,9 +448,20 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-    AccessDeniedException: {}
+    DeleteAccessTokenResponse:
+      type: object
+      properties: {}
+    AccessTokenName:
+      type: string
+      minLength: 1
+      maxLength: 100
     ServiceQuotaExceededException: {}
-    ValidationException: {}
+    AccessTokenSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/AccessTokenSummary'
+    ConflictException: {}
+    ThrottlingException: {}
     CreateAccessTokenResponse:
       type: object
       required:
@@ -450,46 +490,6 @@ components:
       type: string
       minLength: 1
       maxLength: 36
-    ResourceNotFoundException: {}
-    String:
-      type: string
-    AccessTokenSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/AccessTokenSummary'
-    ConflictException: {}
-    AccessTokenName:
-      type: string
-      minLength: 1
-      maxLength: 100
-    ThrottlingException: {}
-    AccessTokenSummary:
-      type: object
-      required:
-      - id
-      - name
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/AccessTokenId'
-          - description: The system-generated ID of the personal access token.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/AccessTokenName'
-          - description: The friendly name of the personal access token.
-        expiresTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The date and time when the personal access token will expire, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-      description: Information about a specified personal access token (PAT).
-    SyntheticTimestamp_date_time:
-      type: string
-      format: date-time
-    AccessTokenSecret:
-      type: string
-      minLength: 1
-      maxLength: 4000
-      format: password
   securitySchemes:
     hmac:
       type: apiKey

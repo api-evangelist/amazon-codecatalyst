@@ -3764,189 +3764,11 @@ paths:
       - Spaces
 components:
   schemas:
-    DevEnvironmentSessionsSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/DevEnvironmentSessionSummary'
-    SourceRepositoryBranchRefString:
-      type: string
-      minLength: 1
-      maxLength: 255
-    RepositoryInput:
-      type: object
-      required:
-      - repositoryName
-      properties:
-        repositoryName:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryNameString'
-          - description: The name of the source repository.
-        branchName:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryBranchString'
-          - description: The name of the branch in a source repository.
-      description: Information about a repository that will be cloned to a Dev Environment.
-    DevEnvironmentAccessDetails:
-      type: object
-      required:
-      - streamUrl
-      - tokenValue
-      properties:
-        streamUrl:
-          allOf:
-          - $ref: '#/components/schemas/SensitiveString'
-          - description: The URL used to send commands to and from the Dev Environment.
-        tokenValue:
-          allOf:
-          - $ref: '#/components/schemas/SensitiveString'
-          - description: An encrypted token value that contains session and caller information used to authenticate the connection.
-      description: Information about connection details for a Dev Environment.
-    ComparisonOperator:
+    DevEnvironmentSessionType:
       type: string
       enum:
-      - EQ
-      - GT
-      - GE
-      - LT
-      - LE
-    Timestamp:
-      type: string
-      format: date-time
-    CreateSourceRepositoryBranchResponse:
-      type: object
-      properties:
-        ref:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryBranchRefString'
-          - description: The Git reference name of the branch.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryBranchString'
-          - description: The name of the newly created branch.
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The time the branch was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        headCommitId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The commit ID of the tip of the newly created branch.
-    GetDevEnvironmentResponseCreatorIdString:
-      type: string
-      minLength: 0
-      maxLength: 1024
-    ListEventLogsResponse:
-      type: object
-      required:
-      - items
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-        items:
-          allOf:
-          - $ref: '#/components/schemas/EventLogEntries'
-          - description: Information about each event retrieved in the list.
-    UpdateDevEnvironmentResponse:
-      type: object
-      required:
-      - id
-      - spaceName
-      - projectName
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: 'The system-generated unique ID of the Dev Environment. '
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        alias:
-          allOf:
-          - $ref: '#/components/schemas/UpdateDevEnvironmentResponseAliasString'
-          - description: The user-specified alias for the Dev Environment.
-        ides:
-          allOf:
-          - $ref: '#/components/schemas/IdeConfigurationList'
-          - description: Information about the integrated development environment (IDE) configured for the Dev Environment.
-        instanceType:
-          allOf:
-          - $ref: '#/components/schemas/InstanceType'
-          - description: 'The Amazon EC2 instace type to use for the Dev Environment. '
-        inactivityTimeoutMinutes:
-          allOf:
-          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
-          - description: 'The amount of time the Dev Environment will run without any activity detected before stopping, in minutes. '
-        clientToken:
-          allOf:
-          - $ref: '#/components/schemas/ClientToken'
-          - description: A user-specified idempotency token. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, the subsequent retries return the result from the original successful request and have no additional effect.
-    StringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/String'
-    IdeConfigurationList:
-      type: array
-      items:
-        $ref: '#/components/schemas/IdeConfiguration'
-      minItems: 0
-      maxItems: 1
-    DeleteProjectResponse:
-      type: object
-      required:
-      - spaceName
-      - name
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        displayName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The friendly name displayed to users of the project in Amazon CodeCatalyst.
-    ResourceNotFoundException: {}
-    GetSourceRepositoryCloneUrlsResponse:
-      type: object
-      required:
-      - https
-      properties:
-        https:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The HTTPS URL to use when cloning the source repository.
-    Uuid:
-      type: string
-      pattern: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
-    GetDevEnvironmentResponseAliasString:
-      type: string
-      minLength: 0
-      maxLength: 128
-    GetSubscriptionResponse:
-      type: object
-      properties:
-        subscriptionType:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The type of the billing plan for the space.
-        awsAccountName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The display name of the Amazon Web Services account used for billing for the space.
-    IdeNameString:
-      type: string
-      minLength: 1
-      maxLength: 128
+      - SSM
+      - SSH
     CreateSourceRepositoryResponse:
       type: object
       required:
@@ -3970,121 +3792,19 @@ components:
           allOf:
           - $ref: '#/components/schemas/SourceRepositoryDescriptionString'
           - description: The description of the source repository.
-    SourceRepositoryBranchString:
-      type: string
-      minLength: 1
-      maxLength: 100
-    SourceRepositoryIdString:
-      type: string
-      pattern: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
-    DevEnvironmentRepositorySummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/DevEnvironmentRepositorySummary'
-    ExecuteCommandSessionConfiguration:
-      type: object
-      required:
-      - command
-      properties:
-        command:
-          allOf:
-          - $ref: '#/components/schemas/ExecuteCommandSessionConfigurationCommandString'
-          - description: The command used at the beginning of the SSH session to a Dev Environment.
-        arguments:
-          allOf:
-          - $ref: '#/components/schemas/ExecuteCommandSessionConfigurationArguments'
-          - description: An array of arguments containing arguments and members.
-      description: Information about the commands that will be run on a Dev Environment when an SSH session begins.
-    SourceRepositoryDescriptionString:
-      type: string
-      minLength: 1
-      maxLength: 255
-    GetSpaceResponse:
-      type: object
-      required:
-      - name
-      - regionName
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        regionName:
-          allOf:
-          - $ref: '#/components/schemas/RegionString'
-          - description: The Amazon Web Services Region where the space exists.
-        displayName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The friendly name of the space displayed to users.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The description of the space.
-    ListSpacesResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-        items:
-          allOf:
-          - $ref: '#/components/schemas/SpaceSummaries'
-          - description: 'Information about the spaces. '
-    Ides:
-      type: array
-      items:
-        $ref: '#/components/schemas/Ide'
-      minItems: 0
-      maxItems: 1
-    UserType:
-      type: string
-      enum:
-      - USER
-      - AWS_ACCOUNT
-      - UNKNOWN
-    UpdateSpaceResponse:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        displayName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The friendly name of the space displayed to users in Amazon CodeCatalyst.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The description of the space.
-    ValidationException: {}
-    GetProjectResponse:
+    DeleteSpaceResponse:
       type: object
       required:
       - name
       properties:
-        spaceName:
+        name:
           allOf:
           - $ref: '#/components/schemas/NameString'
           - description: The name of the space.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the project in the space.
         displayName:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The friendly name of the project displayed to users in Amazon CodeCatalyst.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The description of the project.
-    ClientToken:
-      type: string
-      minLength: 1
-      maxLength: 1024
+          - description: The friendly name of the space displayed to users of the space in Amazon CodeCatalyst.
     StopDevEnvironmentResponse:
       type: object
       required:
@@ -4109,43 +3829,23 @@ components:
           allOf:
           - $ref: '#/components/schemas/DevEnvironmentStatus'
           - description: 'The status of the Dev Environment. '
-    InactivityTimeoutMinutes:
-      type: integer
-      minimum: 0
-      maximum: 1200
-    DevEnvironmentStatus:
-      type: string
-      enum:
-      - PENDING
-      - RUNNING
-      - STARTING
-      - STOPPING
-      - STOPPED
-      - FAILED
-      - DELETING
-      - DELETED
-    PersistentStorageSizeInGiBInteger:
-      type: integer
-      minimum: 0
-      maximum: 64
-    ListDevEnvironmentsResponse:
+    ListEventLogsResponse:
       type: object
       required:
       - items
       properties:
-        items:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentSummaryList'
-          - description: Information about the Dev Environments in a project.
         nextToken:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-    SourceRepositoryNameString:
-      type: string
-      pattern: (?!.*[.]git$)[\w\-.]*
-      minLength: 1
-      maxLength: 100
+        items:
+          allOf:
+          - $ref: '#/components/schemas/EventLogEntries'
+          - description: Information about each event retrieved in the list.
+    EventLogEntries:
+      type: array
+      items:
+        $ref: '#/components/schemas/EventLogEntry'
     ProjectInformation:
       type: object
       properties:
@@ -4158,33 +3858,379 @@ components:
           - $ref: '#/components/schemas/String'
           - description: The system-generated unique ID of the project.
       description: Information about a project in a space.
-    IdeConfiguration:
-      type: object
-      properties:
-        runtime:
-          allOf:
-          - $ref: '#/components/schemas/IdeConfigurationRuntimeString'
-          - description: <p>A link to the IDE runtime image. </p> <note> <p>This parameter is not required for <code>VSCode</code>.</p> </note>
-        name:
-          allOf:
-          - $ref: '#/components/schemas/IdeConfigurationNameString'
-          - description: The name of the IDE. Valid values include <code>Cloud9</code>, <code>IntelliJ</code>, <code>PyCharm</code>, <code>GoLand</code>, and <code>VSCode</code>.
-      description: Information about the configuration of an integrated development environment (IDE) for a Dev Environment.
-    DevEnvironmentRepositorySummary:
+    FilterKey:
+      type: string
+      enum:
+      - hasAccessTo
+    SensitiveString:
+      type: string
+      format: password
+    ProjectSummary:
       type: object
       required:
-      - repositoryName
+      - name
       properties:
-        repositoryName:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the project in the space.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The friendly name displayed to users of the project in Amazon CodeCatalyst.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The description of the project.
+      description: Information about a project.
+    IdeConfigurationRuntimeString:
+      type: string
+      minLength: 1
+      maxLength: 400
+    ConflictException: {}
+    ListSourceRepositoryBranchesResponse:
+      type: object
+      required:
+      - items
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+        items:
+          allOf:
+          - $ref: '#/components/schemas/ListSourceRepositoryBranchesItems'
+          - description: Information about the source branches.
+    Timestamp:
+      type: string
+      format: date-time
+    IdeNameString:
+      type: string
+      minLength: 1
+      maxLength: 128
+    GetDevEnvironmentResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - id
+      - lastUpdatedTime
+      - creatorId
+      - status
+      - repositories
+      - instanceType
+      - inactivityTimeoutMinutes
+      - persistentStorage
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: 'The system-generated unique ID of the Dev Environment. '
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        creatorId:
+          allOf:
+          - $ref: '#/components/schemas/GetDevEnvironmentResponseCreatorIdString'
+          - description: 'The system-generated unique ID of the user who created the Dev Environment. '
+        status:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentStatus'
+          - description: The current status of the Dev Environment.
+        statusReason:
+          allOf:
+          - $ref: '#/components/schemas/StatusReason'
+          - description: The reason for the status.
+        repositories:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentRepositorySummaries'
+          - description: 'The source repository that contains the branch cloned into the Dev Environment. '
+        alias:
+          allOf:
+          - $ref: '#/components/schemas/GetDevEnvironmentResponseAliasString'
+          - description: 'The user-specified alias for the Dev Environment. '
+        ides:
+          allOf:
+          - $ref: '#/components/schemas/Ides'
+          - description: 'Information about the integrated development environment (IDE) configured for the Dev Environment. '
+        instanceType:
+          allOf:
+          - $ref: '#/components/schemas/InstanceType'
+          - description: 'The Amazon EC2 instace type to use for the Dev Environment. '
+        inactivityTimeoutMinutes:
+          allOf:
+          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
+          - description: The amount of time the Dev Environment will run without any activity detected before stopping, in minutes.
+        persistentStorage:
+          allOf:
+          - $ref: '#/components/schemas/PersistentStorage'
+          - description: Information about the amount of storage allocated to the Dev Environment. By default, a Dev Environment is configured to have 16GB of persistent storage.
+    ProjectListFilter:
+      type: object
+      required:
+      - key
+      - values
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/FilterKey'
+          - description: A key that can be used to sort results.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/StringList'
+          - description: The values of the key.
+        comparisonOperator:
+          allOf:
+          - $ref: '#/components/schemas/ComparisonOperator'
+          - description: The operator used to compare the fields.
+      description: nformation about the filter used to narrow the results returned in a list of projects.
+    PersistentStorageSizeInGiBInteger:
+      type: integer
+      minimum: 0
+      maximum: 64
+    DeleteSourceRepositoryResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - name
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        name:
           allOf:
           - $ref: '#/components/schemas/SourceRepositoryNameString'
-          - description: The name of the source repository.
-        branchName:
+          - description: The name of the repository.
+    SyntheticTimestamp_date_time:
+      type: string
+      format: date-time
+    IdeRuntimeString:
+      type: string
+      minLength: 1
+      maxLength: 400
+    ExecuteCommandSessionConfigurationCommandString:
+      type: string
+      minLength: 1
+      maxLength: 255
+    Filter:
+      type: object
+      required:
+      - key
+      - values
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A key that can be used to sort results.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/StringList'
+          - description: The values of the key.
+        comparisonOperator:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The operator used to compare the fields.
+      description: Information about a filter used to limit results of a query.
+    SourceRepositoryBranchString:
+      type: string
+      minLength: 1
+      maxLength: 100
+    UserIdentity:
+      type: object
+      required:
+      - userType
+      - principalId
+      properties:
+        userType:
+          allOf:
+          - $ref: '#/components/schemas/UserType'
+          - description: The role assigned to the user in a Amazon CodeCatalyst space or project when the event occurred.
+        principalId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The ID of the Amazon CodeCatalyst service principal.
+        userName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The display name of the user in Amazon CodeCatalyst.
+        awsAccountId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The Amazon Web Services account number of the user in Amazon Web Services, if any.
+      description: Information about a user whose activity is recorded in an event for a space.
+    CreateSourceRepositoryBranchResponse:
+      type: object
+      properties:
+        ref:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryBranchRefString'
+          - description: The Git reference name of the branch.
+        name:
           allOf:
           - $ref: '#/components/schemas/SourceRepositoryBranchString'
-          - description: 'The name of the branch in a source repository cloned into the Dev Environment. '
-      description: 'Information about the source repsitory for a Dev Environment. '
-    ServiceQuotaExceededException: {}
+          - description: The name of the newly created branch.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The time the branch was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        headCommitId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The commit ID of the tip of the newly created branch.
+    DevEnvironmentSessionsSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DevEnvironmentSessionSummary'
+    OperationType:
+      type: string
+      enum:
+      - READONLY
+      - MUTATION
+    ListSourceRepositoriesItems:
+      type: array
+      items:
+        $ref: '#/components/schemas/ListSourceRepositoriesItem'
+    CreateProjectResponse:
+      type: object
+      required:
+      - name
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The friendly name of the project.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The description of the project.
+    DeleteProjectResponse:
+      type: object
+      required:
+      - spaceName
+      - name
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The friendly name displayed to users of the project in Amazon CodeCatalyst.
+    UpdateProjectResponse:
+      type: object
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The friendly name of the project displayed to users in Amazon CodeCatalyst.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The description of the project.
+    GetProjectResponse:
+      type: object
+      required:
+      - name
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the project in the space.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The friendly name of the project displayed to users in Amazon CodeCatalyst.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The description of the project.
+    ListSourceRepositoryBranchesItem:
+      type: object
+      properties:
+        ref:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryBranchRefString'
+          - description: The Git reference name of the branch.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryBranchString'
+          - description: The name of the branch.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The time the branch was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        headCommitId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The commit ID of the tip of the branch at the time of the request, also known as the head commit.
+      description: Information about a branch of a source repository returned in a list of branches.
+    CreateDevEnvironmentResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - id
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: 'The system-generated unique ID of the Dev Environment. '
+    ComparisonOperator:
+      type: string
+      enum:
+      - EQ
+      - GT
+      - GE
+      - LT
+      - LE
     ListProjectsResponse:
       type: object
       properties:
@@ -4196,9 +4242,50 @@ components:
           allOf:
           - $ref: '#/components/schemas/ProjectSummaries'
           - description: Information about the projects.
-    SensitiveString:
+    UpdateDevEnvironmentResponseAliasString:
       type: string
-      format: password
+      pattern: '[a-zA-Z0-9]+(?:[-_\.][a-zA-Z0-9]+)*'
+      minLength: 1
+      maxLength: 128
+    DeleteDevEnvironmentResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - id
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: 'The system-generated unique ID of the deleted Dev Environment. '
+    RegionString:
+      type: string
+      pattern: (us(?:-gov)?|af|ap|ca|cn|eu|sa)-(central|(?:north|south)?(?:east|west)?)-(\d+)
+      minLength: 3
+      maxLength: 16
+    ResourceNotFoundException: {}
+    DevEnvironmentRepositorySummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/DevEnvironmentRepositorySummary'
+    String:
+      type: string
+    ListSourceRepositoryBranchesItems:
+      type: array
+      items:
+        $ref: '#/components/schemas/ListSourceRepositoryBranchesItem'
+    GetDevEnvironmentResponseAliasString:
+      type: string
+      minLength: 0
+      maxLength: 128
     ListDevEnvironmentSessionsResponse:
       type: object
       required:
@@ -4212,6 +4299,190 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+    StartDevEnvironmentSessionResponseSessionIdString:
+      type: string
+      minLength: 1
+      maxLength: 96
+    ListSourceRepositoriesItem:
+      type: object
+      required:
+      - id
+      - name
+      - lastUpdatedTime
+      - createdTime
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryIdString'
+          - description: The system-generated unique ID of the source repository.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryNameString'
+          - description: The name of the source repository.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryDescriptionString'
+          - description: The description of the repository, if any.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time the source repository was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        createdTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time the source repository was created, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+      description: Information about a source repository returned in a list of source repositories.
+    DevEnvironmentSummary:
+      type: object
+      required:
+      - id
+      - lastUpdatedTime
+      - creatorId
+      - status
+      - repositories
+      - instanceType
+      - inactivityTimeoutMinutes
+      - persistentStorage
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: 'The system-generated unique ID for the Dev Environment. '
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
+          - description: The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        creatorId:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentSummaryCreatorIdString'
+          - description: 'The system-generated unique ID of the user who created the Dev Environment. '
+        status:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentStatus'
+          - description: 'The status of the Dev Environment. '
+        statusReason:
+          allOf:
+          - $ref: '#/components/schemas/StatusReason'
+          - description: The reason for the status.
+        repositories:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentRepositorySummaries'
+          - description: Information about the repositories that will be cloned into the Dev Environment. If no rvalue is specified, no repository is cloned.
+        alias:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentSummaryAliasString'
+          - description: The user-specified alias for the Dev Environment.
+        ides:
+          allOf:
+          - $ref: '#/components/schemas/Ides'
+          - description: Information about the integrated development environment (IDE) configured for a Dev Environment.
+        instanceType:
+          allOf:
+          - $ref: '#/components/schemas/InstanceType'
+          - description: 'The Amazon EC2 instace type used for the Dev Environment. '
+        inactivityTimeoutMinutes:
+          allOf:
+          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
+          - description: The amount of time the Dev Environment will run without any activity detected before stopping, in minutes. Dev Environments consume compute minutes when running.
+        persistentStorage:
+          allOf:
+          - $ref: '#/components/schemas/PersistentStorage'
+          - description: Information about the configuration of persistent storage for the Dev Environment.
+      description: 'Information about a Dev Environment. '
+    ProjectSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProjectSummary'
+    Ide:
+      type: object
+      properties:
+        runtime:
+          allOf:
+          - $ref: '#/components/schemas/IdeRuntimeString'
+          - description: A link to the IDE runtime image.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/IdeNameString'
+          - description: The name of the IDE.
+      description: Information about an integrated development environment (IDE) used in a Dev Environment.
+    ListSpacesResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+        items:
+          allOf:
+          - $ref: '#/components/schemas/SpaceSummaries'
+          - description: 'Information about the spaces. '
+    DevEnvironmentSummaryAliasString:
+      type: string
+      minLength: 0
+      maxLength: 128
+    IdeConfigurationNameString:
+      type: string
+      minLength: 1
+      maxLength: 128
+    GetSourceRepositoryResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - name
+      - lastUpdatedTime
+      - createdTime
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryNameString'
+          - description: The name of the source repository.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryDescriptionString'
+          - description: The description of the source repository.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time the source repository was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+        createdTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time the source repository was created, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
+    ExecuteCommandSessionConfiguration:
+      type: object
+      required:
+      - command
+      properties:
+        command:
+          allOf:
+          - $ref: '#/components/schemas/ExecuteCommandSessionConfigurationCommandString'
+          - description: The command used at the beginning of the SSH session to a Dev Environment.
+        arguments:
+          allOf:
+          - $ref: '#/components/schemas/ExecuteCommandSessionConfigurationArguments'
+          - description: An array of arguments containing arguments and members.
+      description: Information about the commands that will be run on a Dev Environment when an SSH session begins.
+    PersistentStorageConfigurationSizeInGiBInteger:
+      type: integer
+      minimum: 0
+      maximum: 64
     EventLogEntry:
       type: object
       required:
@@ -4285,17 +4556,39 @@ components:
           - $ref: '#/components/schemas/String'
           - description: The user agent whose actions are recorded in the event.
       description: Information about an entry in an event log of Amazon CodeCatalyst activity.
-    ListSourceRepositoriesResponse:
+    RepositoryInput:
+      type: object
+      required:
+      - repositoryName
+      properties:
+        repositoryName:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryNameString'
+          - description: The name of the source repository.
+        branchName:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryBranchString'
+          - description: The name of the branch in a source repository.
+      description: Information about a repository that will be cloned to a Dev Environment.
+    GetSubscriptionResponse:
       type: object
       properties:
-        items:
-          allOf:
-          - $ref: '#/components/schemas/ListSourceRepositoriesItems'
-          - description: Information about the source repositories.
-        nextToken:
+        subscriptionType:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+          - description: The type of the billing plan for the space.
+        awsAccountName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The display name of the Amazon Web Services account used for billing for the space.
+    ClientToken:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    DevEnvironmentSessionSummaryIdString:
+      type: string
+      minLength: 1
+      maxLength: 96
     StartDevEnvironmentSessionResponse:
       type: object
       required:
@@ -4322,202 +4615,100 @@ components:
           allOf:
           - $ref: '#/components/schemas/Uuid'
           - description: The system-generated unique ID of the Dev Environment.
-    RegionString:
-      type: string
-      pattern: (us(?:-gov)?|af|ap|ca|cn|eu|sa)-(central|(?:north|south)?(?:east|west)?)-(\d+)
-      minLength: 3
-      maxLength: 16
-    UserIdentity:
+    PersistentStorage:
       type: object
       required:
-      - userType
-      - principalId
+      - sizeInGiB
       properties:
-        userType:
+        sizeInGiB:
           allOf:
-          - $ref: '#/components/schemas/UserType'
-          - description: The role assigned to the user in a Amazon CodeCatalyst space or project when the event occurred.
-        principalId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The ID of the Amazon CodeCatalyst service principal.
-        userName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The display name of the user in Amazon CodeCatalyst.
-        awsAccountId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The Amazon Web Services account number of the user in Amazon Web Services, if any.
-      description: Information about a user whose activity is recorded in an event for a space.
-    DevEnvironmentSessionSummaryIdString:
-      type: string
-      minLength: 1
-      maxLength: 96
-    ExecuteCommandSessionConfigurationCommandString:
-      type: string
-      minLength: 1
-      maxLength: 255
-    PersistentStorageConfigurationSizeInGiBInteger:
-      type: integer
-      minimum: 0
-      maximum: 64
-    SpaceSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/SpaceSummary'
-    SyntheticTimestamp_date_time:
-      type: string
-      format: date-time
-    IdeConfigurationRuntimeString:
-      type: string
-      minLength: 1
-      maxLength: 400
-    StartDevEnvironmentSessionResponseSessionIdString:
-      type: string
-      minLength: 1
-      maxLength: 96
-    ConflictException: {}
-    ThrottlingException: {}
-    ProjectSummary:
+          - $ref: '#/components/schemas/PersistentStorageSizeInGiBInteger'
+          - description: <p>The size of the persistent storage in gigabytes (specifically GiB).</p> <note> <p>Valid values for storage are based on memory sizes in 16GB increments. Valid values are 16, 32, and 64.</p> </note>
+      description: Information about the persistent storage for a Dev Environment.
+    SpaceSummary:
       type: object
       required:
       - name
+      - regionName
       properties:
         name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the project in the space.
-        displayName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The friendly name displayed to users of the project in Amazon CodeCatalyst.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The description of the project.
-      description: Information about a project.
-    ListSourceRepositoriesItem:
-      type: object
-      required:
-      - id
-      - name
-      - lastUpdatedTime
-      - createdTime
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryIdString'
-          - description: The system-generated unique ID of the source repository.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryNameString'
-          - description: The name of the source repository.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryDescriptionString'
-          - description: The description of the repository, if any.
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The time the source repository was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        createdTime:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The time the source repository was created, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-      description: Information about a source repository returned in a list of source repositories.
-    OperationType:
-      type: string
-      enum:
-      - READONLY
-      - MUTATION
-    UpdateProjectResponse:
-      type: object
-      properties:
-        spaceName:
           allOf:
           - $ref: '#/components/schemas/NameString'
           - description: The name of the space.
-        name:
+        regionName:
           allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project.
+          - $ref: '#/components/schemas/RegionString'
+          - description: The Amazon Web Services Region where the space exists.
         displayName:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The friendly name of the project displayed to users in Amazon CodeCatalyst.
+          - description: The friendly name of the space displayed to users.
         description:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The description of the project.
-    Filter:
-      type: object
-      required:
-      - key
-      - values
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A key that can be used to sort results.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/StringList'
-          - description: The values of the key.
-        comparisonOperator:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The operator used to compare the fields.
-      description: Information about a filter used to limit results of a query.
-    ExecuteCommandSessionConfigurationArgumentsMemberString:
+          - description: The description of the space.
+      description: Information about an space.
+    StopDevEnvironmentSessionResponseSessionIdString:
       type: string
       minLength: 1
-      maxLength: 255
-    DevEnvironmentSessionType:
+      maxLength: 96
+    ThrottlingException: {}
+    Uuid:
       type: string
-      enum:
-      - SSM
-      - SSH
-    ProjectListFilter:
+      pattern: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
+    StatusReason:
+      type: string
+      minLength: 0
+      maxLength: 1024
+    ListSourceRepositoriesResponse:
       type: object
-      required:
-      - key
-      - values
       properties:
-        key:
+        items:
           allOf:
-          - $ref: '#/components/schemas/FilterKey'
-          - description: A key that can be used to sort results.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/StringList'
-          - description: The values of the key.
-        comparisonOperator:
-          allOf:
-          - $ref: '#/components/schemas/ComparisonOperator'
-          - description: The operator used to compare the fields.
-      description: nformation about the filter used to narrow the results returned in a list of projects.
-    DevEnvironmentSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/DevEnvironmentSummary'
-    ListSourceRepositoryBranchesItems:
-      type: array
-      items:
-        $ref: '#/components/schemas/ListSourceRepositoryBranchesItem'
-    ListSourceRepositoryBranchesResponse:
-      type: object
-      required:
-      - items
-      properties:
+          - $ref: '#/components/schemas/ListSourceRepositoriesItems'
+          - description: Information about the source repositories.
         nextToken:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
-        items:
+    GetSourceRepositoryCloneUrlsResponse:
+      type: object
+      required:
+      - https
+      properties:
+        https:
           allOf:
-          - $ref: '#/components/schemas/ListSourceRepositoryBranchesItems'
-          - description: Information about the source branches.
+          - $ref: '#/components/schemas/String'
+          - description: The HTTPS URL to use when cloning the source repository.
+    StringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/String'
+    DevEnvironmentStatus:
+      type: string
+      enum:
+      - PENDING
+      - RUNNING
+      - STARTING
+      - STOPPING
+      - STOPPED
+      - FAILED
+      - DELETING
+      - DELETED
+    ExecuteCommandSessionConfigurationArgumentsMemberString:
+      type: string
+      minLength: 1
+      maxLength: 255
+    UserType:
+      type: string
+      enum:
+      - USER
+      - AWS_ACCOUNT
+      - UNKNOWN
+    GetDevEnvironmentResponseCreatorIdString:
+      type: string
+      minLength: 0
+      maxLength: 1024
     EventPayload:
       type: object
       properties:
@@ -4530,6 +4721,111 @@ components:
           - $ref: '#/components/schemas/String'
           - description: The data included in the event payload.
       description: Information about the payload of an event recording Amazon CodeCatalyst activity.
+    SourceRepositoryIdString:
+      type: string
+      pattern: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
+    SourceRepositoryBranchRefString:
+      type: string
+      minLength: 1
+      maxLength: 255
+    DevEnvironmentSummaryCreatorIdString:
+      type: string
+      minLength: 0
+      maxLength: 1024
+    ListDevEnvironmentsResponse:
+      type: object
+      required:
+      - items
+      properties:
+        items:
+          allOf:
+          - $ref: '#/components/schemas/DevEnvironmentSummaryList'
+          - description: Information about the Dev Environments in a project.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A token returned from a call to this API to indicate the next batch of results to return, if any.
+    ServiceQuotaExceededException: {}
+    SourceRepositoryDescriptionString:
+      type: string
+      minLength: 1
+      maxLength: 255
+    ExecuteCommandSessionConfigurationArguments:
+      type: array
+      items:
+        $ref: '#/components/schemas/ExecuteCommandSessionConfigurationArgumentsMemberString'
+    UpdateDevEnvironmentResponse:
+      type: object
+      required:
+      - id
+      - spaceName
+      - projectName
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: 'The system-generated unique ID of the Dev Environment. '
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        alias:
+          allOf:
+          - $ref: '#/components/schemas/UpdateDevEnvironmentResponseAliasString'
+          - description: The user-specified alias for the Dev Environment.
+        ides:
+          allOf:
+          - $ref: '#/components/schemas/IdeConfigurationList'
+          - description: Information about the integrated development environment (IDE) configured for the Dev Environment.
+        instanceType:
+          allOf:
+          - $ref: '#/components/schemas/InstanceType'
+          - description: 'The Amazon EC2 instace type to use for the Dev Environment. '
+        inactivityTimeoutMinutes:
+          allOf:
+          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
+          - description: 'The amount of time the Dev Environment will run without any activity detected before stopping, in minutes. '
+        clientToken:
+          allOf:
+          - $ref: '#/components/schemas/ClientToken'
+          - description: A user-specified idempotency token. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, the subsequent retries return the result from the original successful request and have no additional effect.
+    ValidationException: {}
+    AccessDeniedException: {}
+    DevEnvironmentSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DevEnvironmentSummary'
+    SourceRepositoryNameString:
+      type: string
+      pattern: (?!.*[.]git$)[\w\-.]*
+      minLength: 1
+      maxLength: 100
+    InactivityTimeoutMinutes:
+      type: integer
+      minimum: 0
+      maximum: 1200
+    SpaceSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/SpaceSummary'
+    DevEnvironmentRepositorySummary:
+      type: object
+      required:
+      - repositoryName
+      properties:
+        repositoryName:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryNameString'
+          - description: The name of the source repository.
+        branchName:
+          allOf:
+          - $ref: '#/components/schemas/SourceRepositoryBranchString'
+          - description: 'The name of the branch in a source repository cloned into the Dev Environment. '
+      description: 'Information about the source repsitory for a Dev Environment. '
     InstanceType:
       type: string
       enum:
@@ -4537,208 +4833,8 @@ components:
       - dev.standard1.medium
       - dev.standard1.large
       - dev.standard1.xlarge
-    StatusReason:
-      type: string
-      minLength: 0
-      maxLength: 1024
-    StopDevEnvironmentSessionResponse:
+    UpdateSpaceResponse:
       type: object
-      required:
-      - spaceName
-      - projectName
-      - id
-      - sessionId
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: The system-generated unique ID of the Dev Environment.
-        sessionId:
-          allOf:
-          - $ref: '#/components/schemas/StopDevEnvironmentSessionResponseSessionIdString'
-          - description: The system-generated unique ID of the Dev Environment session.
-    CreateProjectResponse:
-      type: object
-      required:
-      - name
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        displayName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The friendly name of the project.
-        description:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The description of the project.
-    Ide:
-      type: object
-      properties:
-        runtime:
-          allOf:
-          - $ref: '#/components/schemas/IdeRuntimeString'
-          - description: A link to the IDE runtime image.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/IdeNameString'
-          - description: The name of the IDE.
-      description: Information about an integrated development environment (IDE) used in a Dev Environment.
-    CreateDevEnvironmentResponse:
-      type: object
-      required:
-      - spaceName
-      - projectName
-      - id
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: 'The system-generated unique ID of the Dev Environment. '
-    StopDevEnvironmentSessionResponseSessionIdString:
-      type: string
-      minLength: 1
-      maxLength: 96
-    DevEnvironmentSummaryCreatorIdString:
-      type: string
-      minLength: 0
-      maxLength: 1024
-    UpdateDevEnvironmentResponseAliasString:
-      type: string
-      pattern: '[a-zA-Z0-9]+(?:[-_\.][a-zA-Z0-9]+)*'
-      minLength: 1
-      maxLength: 128
-    DeleteSourceRepositoryResponse:
-      type: object
-      required:
-      - spaceName
-      - projectName
-      - name
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryNameString'
-          - description: The name of the repository.
-    ListSourceRepositoriesItems:
-      type: array
-      items:
-        $ref: '#/components/schemas/ListSourceRepositoriesItem'
-    ExecuteCommandSessionConfigurationArguments:
-      type: array
-      items:
-        $ref: '#/components/schemas/ExecuteCommandSessionConfigurationArgumentsMemberString'
-    NameString:
-      type: string
-      pattern: '[a-zA-Z0-9]+(?:[-_\.][a-zA-Z0-9]+)*'
-      minLength: 3
-      maxLength: 63
-    DevEnvironmentSummaryAliasString:
-      type: string
-      minLength: 0
-      maxLength: 128
-    ProjectSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/ProjectSummary'
-    DevEnvironmentSummary:
-      type: object
-      required:
-      - id
-      - lastUpdatedTime
-      - creatorId
-      - status
-      - repositories
-      - instanceType
-      - inactivityTimeoutMinutes
-      - persistentStorage
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: 'The system-generated unique ID for the Dev Environment. '
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        creatorId:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentSummaryCreatorIdString'
-          - description: 'The system-generated unique ID of the user who created the Dev Environment. '
-        status:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentStatus'
-          - description: 'The status of the Dev Environment. '
-        statusReason:
-          allOf:
-          - $ref: '#/components/schemas/StatusReason'
-          - description: The reason for the status.
-        repositories:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentRepositorySummaries'
-          - description: Information about the repositories that will be cloned into the Dev Environment. If no rvalue is specified, no repository is cloned.
-        alias:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentSummaryAliasString'
-          - description: The user-specified alias for the Dev Environment.
-        ides:
-          allOf:
-          - $ref: '#/components/schemas/Ides'
-          - description: Information about the integrated development environment (IDE) configured for a Dev Environment.
-        instanceType:
-          allOf:
-          - $ref: '#/components/schemas/InstanceType'
-          - description: 'The Amazon EC2 instace type used for the Dev Environment. '
-        inactivityTimeoutMinutes:
-          allOf:
-          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
-          - description: The amount of time the Dev Environment will run without any activity detected before stopping, in minutes. Dev Environments consume compute minutes when running.
-        persistentStorage:
-          allOf:
-          - $ref: '#/components/schemas/PersistentStorage'
-          - description: Information about the configuration of persistent storage for the Dev Environment.
-      description: 'Information about a Dev Environment. '
-    DeleteSpaceResponse:
-      type: object
-      required:
-      - name
       properties:
         name:
           allOf:
@@ -4747,104 +4843,11 @@ components:
         displayName:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The friendly name of the space displayed to users of the space in Amazon CodeCatalyst.
-    StartDevEnvironmentResponse:
-      type: object
-      required:
-      - spaceName
-      - projectName
-      - id
-      - status
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: 'The system-generated unique ID of the Dev Environment. '
-        status:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentStatus'
-          - description: 'The status of the Dev Environment. '
-    DeleteDevEnvironmentResponse:
-      type: object
-      required:
-      - spaceName
-      - projectName
-      - id
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        id:
-          allOf:
-          - $ref: '#/components/schemas/Uuid'
-          - description: 'The system-generated unique ID of the deleted Dev Environment. '
-    GetSourceRepositoryResponse:
-      type: object
-      required:
-      - spaceName
-      - projectName
-      - name
-      - lastUpdatedTime
-      - createdTime
-      properties:
-        spaceName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the space.
-        projectName:
-          allOf:
-          - $ref: '#/components/schemas/NameString'
-          - description: The name of the project in the space.
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SourceRepositoryNameString'
-          - description: The name of the source repository.
+          - description: The friendly name of the space displayed to users in Amazon CodeCatalyst.
         description:
           allOf:
-          - $ref: '#/components/schemas/SourceRepositoryDescriptionString'
-          - description: The description of the source repository.
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The time the source repository was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        createdTime:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The time the source repository was created, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-    PersistentStorage:
-      type: object
-      required:
-      - sizeInGiB
-      properties:
-        sizeInGiB:
-          allOf:
-          - $ref: '#/components/schemas/PersistentStorageSizeInGiBInteger'
-          - description: <p>The size of the persistent storage in gigabytes (specifically GiB).</p> <note> <p>Valid values for storage are based on memory sizes in 16GB increments. Valid values are 16, 32, and 64.</p> </note>
-      description: Information about the persistent storage for a Dev Environment.
-    String:
-      type: string
-    IdeRuntimeString:
-      type: string
-      minLength: 1
-      maxLength: 400
-    EventLogEntries:
-      type: array
-      items:
-        $ref: '#/components/schemas/EventLogEntry'
-    AccessDeniedException: {}
+          - $ref: '#/components/schemas/String'
+          - description: The description of the space.
     DevEnvironmentSessionSummary:
       type: object
       required:
@@ -4875,23 +4878,25 @@ components:
           - $ref: '#/components/schemas/DevEnvironmentSessionSummaryIdString'
           - description: The system-generated unique ID of the Dev Environment session.
       description: Information about active sessions for a Dev Environment.
-    FilterKey:
-      type: string
-      enum:
-      - hasAccessTo
-    GetDevEnvironmentResponse:
+    IdeConfiguration:
+      type: object
+      properties:
+        runtime:
+          allOf:
+          - $ref: '#/components/schemas/IdeConfigurationRuntimeString'
+          - description: <p>A link to the IDE runtime image. </p> <note> <p>This parameter is not required for <code>VSCode</code>.</p> </note>
+        name:
+          allOf:
+          - $ref: '#/components/schemas/IdeConfigurationNameString'
+          - description: The name of the IDE. Valid values include <code>Cloud9</code>, <code>IntelliJ</code>, <code>PyCharm</code>, <code>GoLand</code>, and <code>VSCode</code>.
+      description: Information about the configuration of an integrated development environment (IDE) for a Dev Environment.
+    StartDevEnvironmentResponse:
       type: object
       required:
       - spaceName
       - projectName
       - id
-      - lastUpdatedTime
-      - creatorId
       - status
-      - repositories
-      - instanceType
-      - inactivityTimeoutMinutes
-      - persistentStorage
       properties:
         spaceName:
           allOf:
@@ -4905,47 +4910,23 @@ components:
           allOf:
           - $ref: '#/components/schemas/Uuid'
           - description: 'The system-generated unique ID of the Dev Environment. '
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The time when the Dev Environment was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        creatorId:
-          allOf:
-          - $ref: '#/components/schemas/GetDevEnvironmentResponseCreatorIdString'
-          - description: 'The system-generated unique ID of the user who created the Dev Environment. '
         status:
           allOf:
           - $ref: '#/components/schemas/DevEnvironmentStatus'
-          - description: The current status of the Dev Environment.
-        statusReason:
-          allOf:
-          - $ref: '#/components/schemas/StatusReason'
-          - description: The reason for the status.
-        repositories:
-          allOf:
-          - $ref: '#/components/schemas/DevEnvironmentRepositorySummaries'
-          - description: 'The source repository that contains the branch cloned into the Dev Environment. '
-        alias:
-          allOf:
-          - $ref: '#/components/schemas/GetDevEnvironmentResponseAliasString'
-          - description: 'The user-specified alias for the Dev Environment. '
-        ides:
-          allOf:
-          - $ref: '#/components/schemas/Ides'
-          - description: 'Information about the integrated development environment (IDE) configured for the Dev Environment. '
-        instanceType:
-          allOf:
-          - $ref: '#/components/schemas/InstanceType'
-          - description: 'The Amazon EC2 instace type to use for the Dev Environment. '
-        inactivityTimeoutMinutes:
-          allOf:
-          - $ref: '#/components/schemas/InactivityTimeoutMinutes'
-          - description: The amount of time the Dev Environment will run without any activity detected before stopping, in minutes.
-        persistentStorage:
-          allOf:
-          - $ref: '#/components/schemas/PersistentStorage'
-          - description: Information about the amount of storage allocated to the Dev Environment. By default, a Dev Environment is configured to have 16GB of persistent storage.
-    SpaceSummary:
+          - description: 'The status of the Dev Environment. '
+    IdeConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IdeConfiguration'
+      minItems: 0
+      maxItems: 1
+    Ides:
+      type: array
+      items:
+        $ref: '#/components/schemas/Ide'
+      minItems: 0
+      maxItems: 1
+    GetSpaceResponse:
       type: object
       required:
       - name
@@ -4967,31 +4948,50 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: The description of the space.
-      description: Information about an space.
-    ListSourceRepositoryBranchesItem:
+    DevEnvironmentAccessDetails:
       type: object
+      required:
+      - streamUrl
+      - tokenValue
       properties:
-        ref:
+        streamUrl:
           allOf:
-          - $ref: '#/components/schemas/SourceRepositoryBranchRefString'
-          - description: The Git reference name of the branch.
-        name:
+          - $ref: '#/components/schemas/SensitiveString'
+          - description: The URL used to send commands to and from the Dev Environment.
+        tokenValue:
           allOf:
-          - $ref: '#/components/schemas/SourceRepositoryBranchString'
-          - description: The name of the branch.
-        lastUpdatedTime:
-          allOf:
-          - $ref: '#/components/schemas/SyntheticTimestamp_date_time'
-          - description: The time the branch was last updated, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
-        headCommitId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The commit ID of the tip of the branch at the time of the request, also known as the head commit.
-      description: Information about a branch of a source repository returned in a list of branches.
-    IdeConfigurationNameString:
+          - $ref: '#/components/schemas/SensitiveString'
+          - description: An encrypted token value that contains session and caller information used to authenticate the connection.
+      description: Information about connection details for a Dev Environment.
+    NameString:
       type: string
-      minLength: 1
-      maxLength: 128
+      pattern: '[a-zA-Z0-9]+(?:[-_\.][a-zA-Z0-9]+)*'
+      minLength: 3
+      maxLength: 63
+    StopDevEnvironmentSessionResponse:
+      type: object
+      required:
+      - spaceName
+      - projectName
+      - id
+      - sessionId
+      properties:
+        spaceName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the space.
+        projectName:
+          allOf:
+          - $ref: '#/components/schemas/NameString'
+          - description: The name of the project in the space.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/Uuid'
+          - description: The system-generated unique ID of the Dev Environment.
+        sessionId:
+          allOf:
+          - $ref: '#/components/schemas/StopDevEnvironmentSessionResponseSessionIdString'
+          - description: The system-generated unique ID of the Dev Environment session.
   securitySchemes:
     hmac:
       type: apiKey
