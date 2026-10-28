@@ -66,138 +66,246 @@
 
 Amazon CodeCatalyst is a unified software development service that helps teams collaborate more effectively on software projects. It provides integrated tools for source code management, CI/CD workflows, issue tracking, and cloud-based development environments (Dev Environments). Teams can use CodeCatalyst to accelerate development velocity, standardize workflows, and integrate natively with AWS services and third-party tools.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/amazon-codecatalyst/refs/heads/main/apis.yml)
+**Areas:** Amazon · AWS · Developer Tools · CI/CD · Collaboration · DevOps · Version Control
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon CodeCatalyst on APIs.io
 
-## Tags:
+Everything profiled for Amazon CodeCatalyst is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-codecatalyst/](https://apis.io/providers/amazon-codecatalyst/)** — or go straight to one of the APIs or properties below.
 
- - Amazon, AWS, Developer Tools, CI/CD, Collaboration, DevOps, Source Control
+### APIs (9)
 
-## Timestamps
+- [Amazon CodeCatalyst Session API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-session-api/) — The Session API from Amazon CodeCatalyst — 1 operation(s) for session.
+- [Amazon CodeCatalyst Spaces API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-spaces-api/) — The Spaces API from Amazon CodeCatalyst — 18 operation(s) for spaces.
+- [Amazon CodeCatalyst Access Tokens API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-access-tokens-api/) — The Access Tokens API from Amazon CodeCatalyst — 2 operation(s) for access tokens.
+- [Amazon CodeCatalyst User Details API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-user-details-api/) — The User Details API from Amazon CodeCatalyst — 1 operation(s) for user details.
+- [Amazon CodeCatalyst Codecatalyst Devenvironments API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-devenvironments-api/) — The Codecatalyst Devenvironments API from Amazon CodeCatalyst — 3 operation(s) for codecatalyst devenvironments.
+- [Amazon CodeCatalyst Codecatalyst Operations API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-operations-api/) — The Codecatalyst Operations API from Amazon CodeCatalyst — 9 operation(s) for codecatalyst operations.
+- [Amazon CodeCatalyst Codecatalyst Projects API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-projects-api/) — The Codecatalyst Projects API from Amazon CodeCatalyst — 2 operation(s) for codecatalyst projects.
+- [Amazon CodeCatalyst Codecatalyst Sourcerepositories API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-sourcerepositories-api/) — The Codecatalyst Sourcerepositories API from Amazon CodeCatalyst — 2 operation(s) for codecatalyst sourcerepositories.
+- [Amazon CodeCatalyst Codecatalyst Workflowruns API](https://apis.io/apis/amazon-codecatalyst/amazon-codecatalyst-workflowruns-api/) — The Codecatalyst Workflowruns API from Amazon CodeCatalyst — 2 operation(s) for codecatalyst workflowruns.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon CodeCatalyst API
+#### MCP servers (1)
 
-The Amazon CodeCatalyst REST API provides programmatic access to spaces, projects, source repositories, Dev Environments, workflows, workflow runs, and user management. Build integrations, automate project workflows, and manage development environments programmatically.
+Model Context Protocol servers that expose the API to agents.
 
-**Human URL:** [https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html)
+- [amazon-codecatalyst](https://apis.io/servers/amazon-codecatalyst/amazon-codecatalyst/)
 
-#### Tags:
+#### Agentic access (1)
 
- - Amazon, AWS, Developer Tools, CI/CD, Collaboration
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Amazon Codecatalyst Agentic Access](https://apis.io/agentic-access/amazon-codecatalyst/amazon-codecatalyst-agentic-access/)
 
+#### JSON Schema (170)
+
+The data models the API reads and writes.
+
+- [AccessTokenId](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-access-token-id/)
+- [AccessTokenName](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-access-token-name/)
+- [AccessTokenSecret](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-access-token-secret/)
+- [AccessTokenSummaries](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-access-token-summaries/)
+- [AccessTokenSummary](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-access-token-summary/)
+- [Boolean](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-boolean/)
+- [ClientToken](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-client-token/)
+- [ComparisonOperator](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-comparison-operator/)
+- [CreateAccessTokenRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-access-token-request/)
+- [CreateAccessTokenResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-access-token-response/)
+- [CreateDevEnvironmentRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-request/)
+- [CreateDevEnvironmentRequestAliasString](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-request-alias-string/)
+- [CreateDevEnvironmentResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-response/)
+- [CreateProjectRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-project-request/)
+- [CreateProjectResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-project-response/)
+- [CreateSourceRepositoryBranchRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-request/)
+- [CreateSourceRepositoryBranchResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-response/)
+- [CreateSourceRepositoryRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-request/)
+- [CreateSourceRepositoryResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-response/)
+- [DeleteAccessTokenRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-request/)
+- [DeleteAccessTokenResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-response/)
+- [DeleteDevEnvironmentRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-request/)
+- [DeleteDevEnvironmentResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-response/)
+- [DeleteProjectRequest](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-project-request/)
+- [DeleteProjectResponse](https://apis.io/schemas/amazon-codecatalyst/amazon-codecatalyst-delete-project-response/)
+- …and 145 more published on APIs.io
+
+#### JSON Structure (170)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Codecatalyst Access Token Id Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-access-token-id-structure/)
+- [Amazon Codecatalyst Access Token Name Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-access-token-name-structure/)
+- [Amazon Codecatalyst Access Token Secret Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-access-token-secret-structure/)
+- [Amazon Codecatalyst Access Token Summaries Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-access-token-summaries-structure/)
+- [Amazon Codecatalyst Access Token Summary Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-access-token-summary-structure/)
+- [Amazon Codecatalyst Boolean Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-boolean-structure/)
+- [Amazon Codecatalyst Client Token Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-client-token-structure/)
+- [Amazon Codecatalyst Comparison Operator Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-comparison-operator-structure/)
+- [Amazon Codecatalyst Create Access Token Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-access-token-request-structure/)
+- [Amazon Codecatalyst Create Access Token Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-access-token-response-structure/)
+- [Amazon Codecatalyst Create Dev Environment Request Alias String Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-request-alias-string-structure/)
+- [Amazon Codecatalyst Create Dev Environment Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-request-structure/)
+- [Amazon Codecatalyst Create Dev Environment Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-response-structure/)
+- [Amazon Codecatalyst Create Project Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-project-request-structure/)
+- [Amazon Codecatalyst Create Project Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-project-response-structure/)
+- [Amazon Codecatalyst Create Source Repository Branch Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-request-structure/)
+- [Amazon Codecatalyst Create Source Repository Branch Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-response-structure/)
+- [Amazon Codecatalyst Create Source Repository Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-request-structure/)
+- [Amazon Codecatalyst Create Source Repository Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-response-structure/)
+- [Amazon Codecatalyst Delete Access Token Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-request-structure/)
+- [Amazon Codecatalyst Delete Access Token Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-response-structure/)
+- [Amazon Codecatalyst Delete Dev Environment Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-request-structure/)
+- [Amazon Codecatalyst Delete Dev Environment Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-response-structure/)
+- [Amazon Codecatalyst Delete Project Request Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-project-request-structure/)
+- [Amazon Codecatalyst Delete Project Response Structure](https://apis.io/json-structure/amazon-codecatalyst/amazon-codecatalyst-delete-project-response-structure/)
+- …and 145 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Codecatalyst Context](https://apis.io/jsonld/amazon-codecatalyst/amazon-codecatalyst-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Codecatalyst Vocabulary](https://apis.io/vocabularies/amazon-codecatalyst/amazon-codecatalyst-vocabulary/)
+
+#### Examples (88)
+
+Example requests and responses.
+
+- [Amazon Codecatalyst Access Token Summary Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-access-token-summary-example/)
+- [Amazon Codecatalyst Create Access Token Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-access-token-request-example/)
+- [Amazon Codecatalyst Create Access Token Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-access-token-response-example/)
+- [Amazon Codecatalyst Create Dev Environment Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-request-example/)
+- [Amazon Codecatalyst Create Dev Environment Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-dev-environment-response-example/)
+- [Amazon Codecatalyst Create Project Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-project-request-example/)
+- [Amazon Codecatalyst Create Project Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-project-response-example/)
+- [Amazon Codecatalyst Create Source Repository Branch Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-request-example/)
+- [Amazon Codecatalyst Create Source Repository Branch Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-branch-response-example/)
+- [Amazon Codecatalyst Create Source Repository Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-request-example/)
+- [Amazon Codecatalyst Create Source Repository Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-create-source-repository-response-example/)
+- [Amazon Codecatalyst Delete Access Token Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-request-example/)
+- [Amazon Codecatalyst Delete Access Token Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-access-token-response-example/)
+- [Amazon Codecatalyst Delete Dev Environment Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-request-example/)
+- [Amazon Codecatalyst Delete Dev Environment Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-dev-environment-response-example/)
+- [Amazon Codecatalyst Delete Project Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-project-request-example/)
+- [Amazon Codecatalyst Delete Project Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-project-response-example/)
+- [Amazon Codecatalyst Delete Source Repository Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-source-repository-request-example/)
+- [Amazon Codecatalyst Delete Source Repository Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-source-repository-response-example/)
+- [Amazon Codecatalyst Delete Space Request Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-space-request-example/)
+- [Amazon Codecatalyst Delete Space Response Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-delete-space-response-example/)
+- [Amazon Codecatalyst Dev Environment Access Details Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-dev-environment-access-details-example/)
+- [Amazon Codecatalyst Dev Environment Repository Summary Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-dev-environment-repository-summary-example/)
+- [Amazon Codecatalyst Dev Environment Session Configuration Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-dev-environment-session-configuration-example/)
+- [Amazon Codecatalyst Dev Environment Session Summary Example](https://apis.io/examples/amazon-codecatalyst/amazon-codecatalyst-dev-environment-session-summary-example/)
+- …and 63 more published on APIs.io
+
+#### Collections (8)
+
+Postman and Open Collection request collections.
+
+- [Amazon CodeCatalyst AccessTokens API](https://apis.io/collections/amazon-codecatalyst/open-amazon-codecatalyst-accesstokens-api/)
+- [Amazon CodeCatalyst AccessTokens Session API](https://apis.io/collections/amazon-codecatalyst/open-amazon-codecatalyst-session-api/)
+- [Amazon CodeCatalyst AccessTokens Spaces API](https://apis.io/collections/amazon-codecatalyst/open-amazon-codecatalyst-spaces-api/)
+- [Amazon CodeCatalyst AccessTokens UserDetails API](https://apis.io/collections/amazon-codecatalyst/open-amazon-codecatalyst-userdetails-api/)
+- [Amazon CodeCatalyst AccessTokens API](https://apis.io/collections/amazon-codecatalyst/postman-amazon-codecatalyst-accesstokens-api/)
+- [Amazon CodeCatalyst AccessTokens Session API](https://apis.io/collections/amazon-codecatalyst/postman-amazon-codecatalyst-session-api/)
+- [Amazon CodeCatalyst AccessTokens Spaces API](https://apis.io/collections/amazon-codecatalyst/postman-amazon-codecatalyst-spaces-api/)
+- [Amazon CodeCatalyst AccessTokens UserDetails API](https://apis.io/collections/amazon-codecatalyst/postman-amazon-codecatalyst-userdetails-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Codecatalyst Openapi Overlay](https://apis.io/overlays/amazon-codecatalyst/amazon-codecatalyst-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon CodeCatalyst — jsonschema rules](https://apis.io/rules/amazon-codecatalyst/amazon-codecatalyst-jsonschema-spectral-rules/)
+- [Amazon CodeCatalyst API Rules](https://apis.io/rules/amazon-codecatalyst/amazon-codecatalyst-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Codecatalyst Authentication](https://apis.io/security/amazon-codecatalyst/amazon-codecatalyst-authentication/)
+- [Amazon Codecatalyst Domain Security](https://apis.io/security/amazon-codecatalyst/amazon-codecatalyst-domain-security/)
+- [Amazon Codecatalyst Trust Center](https://apis.io/security/amazon-codecatalyst/amazon-codecatalyst-trust-center/)
+- [Amazon Codecatalyst Vulnerability Disclosure](https://apis.io/security/amazon-codecatalyst/amazon-codecatalyst-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/codecatalyst/)
 - [Documentation](https://docs.aws.amazon.com/codecatalyst/latest/userguide/)
-- [APIReference](https://docs.aws.amazon.com/codecatalyst/latest/APIReference/Welcome.html)
-- [OpenAPI](openapi/amazon-codecatalyst-openapi-original.yaml)
-
-## Common Properties
-
-- [GettingStarted](https://docs.aws.amazon.com/codecatalyst/latest/userguide/getting-started-overview.html)
-- [Authentication](https://docs.aws.amazon.com/codecatalyst/latest/userguide/tokens-overview.html)
+- [Getting started](https://docs.aws.amazon.com/codecatalyst/latest/userguide/getting-started-overview.html)
 - [Pricing](https://aws.amazon.com/codecatalyst/pricing/)
-- [Console](https://codecatalyst.aws/)
-- [Portal](https://aws.amazon.com/codecatalyst/)
-- [Documentation](https://docs.aws.amazon.com/codecatalyst/latest/userguide/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
+- [Sign up](https://codecatalyst.aws/)
 - [Blog](https://aws.amazon.com/blogs/devops/)
-- [SignUp](https://codecatalyst.aws/)
-- [GitHubOrganization](https://github.com/aws)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Dev Environments | Cloud-based development environments pre-configured with your project code and tools enabling instant onboarding and eli |
-| Source Repositories | Built-in Git repositories for hosting and managing source code with branching, pull requests, and code review capabiliti |
-| CI/CD Workflows | Visual workflow builder for creating automated build, test, and deployment pipelines with native AWS service integration |
-| Project Management | Integrated issue tracking and project boards for organizing work, tracking bugs, and managing feature development alongs |
-| Spaces | Organizational units for grouping projects and managing team membership, billing, and resource access across an organiza |
-| Third-Party Integrations | Connect to GitHub repositories, Jira, Slack, and other third-party tools to incorporate CodeCatalyst into existing devel |
+**Kin Score 49.4** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 62.9 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 53.6 |
+| Access clarity | 28.9 |
 
-| Name | Description |
-|------|-------------|
-| Rapid Developer Onboarding | Use Dev Environments to eliminate local development setup time, allowing new developers to be productive within minutes  |
-| Standardized CI/CD Pipelines | Create and enforce consistent build, test, and deployment workflows across all projects in a space, reducing inconsisten |
-| Collaborative Code Development | Enable distributed teams to collaborate on source code through integrated repositories, pull requests, and code review w |
+**Agent readiness 35.9** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| GitHub | Connect GitHub repositories to CodeCatalyst projects and sync code. |
-| Jira | Link CodeCatalyst issues with Jira for unified project tracking. |
-| Slack | Receive CodeCatalyst notifications and workflow status updates in Slack. |
-| Amazon Q Developer | AI coding assistance integrated into Dev Environments and code reviews. |
-| AWS Lambda | Deploy serverless functions as part of CodeCatalyst CI/CD workflows. |
-| Amazon ECS | Deploy containerized applications to ECS from CodeCatalyst pipelines. |
-| AWS CloudFormation | Deploy infrastructure as code using CloudFormation actions in workflows. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-codecatalyst/](https://apis.io/providers/amazon-codecatalyst/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [amazon-codecatalyst-openapi-original](openapi/amazon-codecatalyst-openapi-original.yaml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon CodeCatalyst: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-170 JSON Schema files generated from the OpenAPI specification.
-
-- [amazon-codecatalyst-access-token-id-schema](json-schema/amazon-codecatalyst-access-token-id-schema.json)
-- [amazon-codecatalyst-access-token-name-schema](json-schema/amazon-codecatalyst-access-token-name-schema.json)
-- [amazon-codecatalyst-access-token-secret-schema](json-schema/amazon-codecatalyst-access-token-secret-schema.json)
-- [amazon-codecatalyst-access-token-summaries-schema](json-schema/amazon-codecatalyst-access-token-summaries-schema.json)
-- [amazon-codecatalyst-access-token-summary-schema](json-schema/amazon-codecatalyst-access-token-summary-schema.json)
-- ...and 165 more in [json-schema/](json-schema/)
-
-### JSON Structure
-
-170 JSON Structure files in [json-structure/](json-structure/).
-
-### JSON-LD
-
-- [amazon-codecatalyst-context](json-ld/amazon-codecatalyst-context.jsonld)
-
-### Examples
-
-170 example JSON files in [examples/](examples/).
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [codecatalyst](capabilities/shared/codecatalyst.yaml) — 33 operations
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon CodeCatalyst Developer Collaboration](capabilities/amazon-codecatalyst-developer-collaboration.yaml) | codecatalyst | 10 | DevOps Engineer |
-
-## Vocabulary
-
-- [amazon-codecatalyst-vocabulary](vocabulary/amazon-codecatalyst-vocabulary.yaml) — Unified taxonomy mapping 3 resources, 5 actions, 1 workflows, and 2 personas
-
-## Rules
-
-- [amazon-codecatalyst-spectral-rules](rules/amazon-codecatalyst-spectral-rules.yml) — 15 rules enforcing Amazon CodeCatalyst API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-codecatalyst/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
